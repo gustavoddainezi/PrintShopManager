@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+
+<BorderPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="500.0" prefWidth="1100.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <top>
+      <AnchorPane prefHeight="29.0" prefWidth="1100.0" style="-fx-background-color: white;" BorderPane.alignment="CENTER">
+         <children>
+            <Label layoutX="59.0" layoutY="-1.0" text="Cadastro de Funcionários" textFill="#48a5ea">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </top>
+   <center>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: white;" BorderPane.alignment="CENTER">
+         <BorderPane.margin>
+            <Insets bottom="30.0" left="30.0" right="30.0" top="30.0" />
+         </BorderPane.margin>
+         <children>
+            <HBox alignment="CENTER_RIGHT" layoutX="83.0" layoutY="30.0" maxWidth="-Infinity" prefWidth="250.0" style="-fx-background-color: transparent; -fx-border-color: #a2a2a2; -fx-border-width: 0px 0px 2px 0px; -fx-border-color: black;" AnchorPane.leftAnchor="82.0">
+               <children>
+                  <TextField fx:id="txtUser" promptText="Nome do Funcionário" style="-fx-background-color: transparent;" styleClass="textField" HBox.hgrow="ALWAYS">
+                     <HBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font name="Century Gothic" size="14.0" />
+                     </font>
+                  </TextField>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER_RIGHT" layoutX="83.0" layoutY="250.0" maxWidth="-Infinity" prefWidth="250.0" style="-fx-background-color: transparent; -fx-border-color: #a2a2a2; -fx-border-width: 0px 0px 2px 0px; -fx-border-color: black;" AnchorPane.leftAnchor="82.0">
+               <children>
+                  <TextField fx:id="txtUser1" promptText="Telefone fixo" style="-fx-background-color: transparent;" styleClass="textField" HBox.hgrow="ALWAYS">
+                     <font>
+                        <Font name="Century Gothic" size="14.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </HBox.margin>
+                  </TextField>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER_RIGHT" layoutX="83.0" layoutY="134.0" maxWidth="-Infinity" prefWidth="250.0" style="-fx-background-color: transparent; -fx-border-color: #a2a2a2; -fx-border-width: 0px 0px 2px 0px; -fx-border-color: black;" AnchorPane.leftAnchor="82.0">
+               <children>
+                  <TextField fx:id="txtUser11" promptText="Telefone celular" style="-fx-background-color: transparent;" styleClass="textField" HBox.hgrow="ALWAYS">
+                     <font>
+                        <Font name="Century Gothic" size="14.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </HBox.margin>
+                  </TextField>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER_RIGHT" layoutX="608.0" layoutY="30.0" maxWidth="-Infinity" prefWidth="250.0" style="-fx-background-color: transparent; -fx-border-color: #a2a2a2; -fx-border-width: 0px 0px 2px 0px; -fx-border-color: black;" AnchorPane.rightAnchor="82.0">
+               <children>
+                  <TextField fx:id="txtUser2" promptText="Salário" style="-fx-background-color: transparent;" styleClass="textField" HBox.hgrow="ALWAYS">
+                     <font>
+                        <Font name="Century Gothic" size="14.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </HBox.margin>
+                  </TextField>
+               </children>
+            </HBox>
+            <Button fx:id="btnCadastrar" layoutX="656.0" layoutY="388.0" mnemonicParsing="false" onAction="#login" prefHeight="37.0" prefWidth="155.0" style="-fx-background-color: #00A2E8; -fx-background-radius: 10px;" text="Cadastrar" textFill="WHITE" AnchorPane.rightAnchor="129.0">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button fx:id="btnLimpar" layoutX="130.0" layoutY="388.0" mnemonicParsing="false" onAction="#login" prefHeight="37.0" prefWidth="155.0" style="-fx-background-color: #00A2E8; -fx-background-radius: 10px;" text="Limpar campos" textFill="WHITE" AnchorPane.leftAnchor="130.0">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <HBox alignment="CENTER_RIGHT" layoutX="609.0" layoutY="134.0" maxWidth="-Infinity" prefWidth="250.0" style="-fx-background-color: transparent; -fx-border-color: #a2a2a2; -fx-border-width: 0px 0px 2px 0px; -fx-border-color: black;" AnchorPane.rightAnchor="82.0">
+               <children>
+                  <TextField fx:id="txtUser3" promptText="Cargo" style="-fx-background-color: transparent;" styleClass="textField" HBox.hgrow="ALWAYS">
+                     <font>
+                        <Font name="Century Gothic" size="14.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </HBox.margin>
+                  </TextField>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER_RIGHT" layoutX="395.0" layoutY="30.0" maxWidth="-Infinity" prefWidth="250.0" style="-fx-background-color: transparent; -fx-border-color: #a2a2a2; -fx-border-width: 0px 0px 2px 0px; -fx-border-color: black;">
+               <children>
+                  <TextField fx:id="txtUser31" promptText="Estado" style="-fx-background-color: transparent;" styleClass="textField" HBox.hgrow="ALWAYS">
+                     <font>
+                        <Font name="Century Gothic" size="14.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </HBox.margin>
+                  </TextField>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER_RIGHT" layoutX="395.0" layoutY="134.0" maxWidth="-Infinity" prefWidth="250.0" style="-fx-background-color: transparent; -fx-border-color: #a2a2a2; -fx-border-width: 0px 0px 2px 0px; -fx-border-color: black;">
+               <children>
+                  <TextField fx:id="txtUser311" promptText="Cidade" style="-fx-background-color: transparent;" styleClass="textField" HBox.hgrow="ALWAYS">
+                     <font>
+                        <Font name="Century Gothic" size="14.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </HBox.margin>
+                  </TextField>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER_RIGHT" layoutX="395.0" layoutY="250.0" maxWidth="-Infinity" prefWidth="250.0" style="-fx-background-color: transparent; -fx-border-color: #a2a2a2; -fx-border-width: 0px 0px 2px 0px; -fx-border-color: black;">
+               <children>
+                  <TextField fx:id="txtUser312" promptText="Endereço" style="-fx-background-color: transparent;" styleClass="textField" HBox.hgrow="ALWAYS">
+                     <font>
+                        <Font name="Century Gothic" size="14.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </HBox.margin>
+                  </TextField>
+               </children>
+            </HBox>
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>
