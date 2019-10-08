@@ -5,6 +5,10 @@
     -fx-cursor: text;
 }
 
+#btnLogin{
+    -fx-cursor: hand;
+}
+
 FontAwesomeIcon {
-    -fx-cursor:hand;
+    -fx-cursor: hand;
 }

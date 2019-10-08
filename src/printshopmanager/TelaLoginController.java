@@ -87,8 +87,12 @@ public class TelaLoginController implements Initializable {
                 
                 // Verifica as credênciais com o Banco de Dados
                 if ((senhas.equals(senha) || senha.equals(this.cod)) && logins.equals(login)) {
-                    alerta.setContentText("O login foi efetuado com sucesso!");
-                    alerta.showAndWait();
+                    PrintShopManager menu = new PrintShopManager();
+                    Node node = (Node) event.getSource();
+                    Stage stage = (Stage) node.getScene().getWindow();
+                    stage.close();
+                    menu.setLoader("TelaMenu.fxml");
+                    menu.start(new Stage());
                     break;
                 }
                 else{

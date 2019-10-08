@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="588.0" prefWidth="260.0" styleClass="vBox" stylesheets="@telamenu.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Button mnemonicParsing="false" prefHeight="83.0" prefWidth="260.0" text="Orçamento" textFill="WHITE">
+         <VBox.margin>
+            <Insets top="85.0" />
+         </VBox.margin>
+         <font>
+            <Font name="Century Gothic" size="18.0" />
+         </font>
+         <graphic>
+            <FontAwesomeIcon fill="WHITE" iconName="FILE" wrappingWidth="19.428571701049805" />
+         </graphic>
+      </Button>
+      <Button mnemonicParsing="false" prefHeight="83.0" prefWidth="260.0" text="Funcionários" textFill="WHITE">
+         <font>
+            <Font name="Century Gothic" size="18.0" />
+         </font>
+         <graphic>
+            <FontAwesomeIcon fill="WHITE" iconName="USER" wrappingWidth="19.428571701049805" />
+         </graphic>
+      </Button>
+      <Button mnemonicParsing="false" prefHeight="83.0" prefWidth="260.0" text="Produtos" textFill="WHITE">
+         <font>
+            <Font name="Century Gothic" size="18.0" />
+         </font>
+         <graphic>
+            <FontAwesomeIcon fill="WHITE" iconName="SHOPPING_CART" wrappingWidth="19.428571701049805" />
+         </graphic>
+      </Button>
+      <Button mnemonicParsing="false" prefHeight="83.0" prefWidth="260.0" text="Fornecedores" textFill="WHITE">
+         <font>
+            <Font name="Century Gothic" size="18.0" />
+         </font>
+         <graphic>
+            <FontAwesomeIcon fill="WHITE" iconName="TRUCK" wrappingWidth="19.428571701049805" />
+         </graphic>
+      </Button>
+      <Button mnemonicParsing="false" prefHeight="83.0" prefWidth="260.0" text="Ferramentas" textFill="WHITE">
+         <font>
+            <Font name="Century Gothic" size="18.0" />
+         </font>
+         <graphic>
+            <FontAwesomeIcon fill="WHITE" iconName="TAGS" wrappingWidth="19.428571701049805" />
+         </graphic>
+      </Button>
+   </children>
+</VBox>

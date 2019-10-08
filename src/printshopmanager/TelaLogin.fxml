@@ -63,10 +63,7 @@
                                     <Font name="Century Gothic" size="14.0" />
                                  </font>
                               </TextField>
-                              <FontAwesomeIcon fill="#39daf7" iconName="USER">
-                                 <cursor>
-                                    <Cursor fx:constant="DEFAULT" />
-                                 </cursor></FontAwesomeIcon>
+                              <FontAwesomeIcon fill="#39daf7" iconName="USER"></FontAwesomeIcon>
                            </children>
                         </HBox>
                         <HBox alignment="CENTER_RIGHT" maxWidth="-Infinity" prefWidth="250.0" style="-fx-background-color: #002A47; -fx-border-color: #a2a2a2; -fx-border-width: 0px 0px 2px 0px; -fx-border-color: #39DAF7;">
@@ -79,10 +76,7 @@
                                     <Font name="Century Gothic" size="14.0" />
                                  </font>
                               </PasswordField>
-                              <FontAwesomeIcon fill="#39daf7" iconName="KEY">
-                                 <cursor>
-                                    <Cursor fx:constant="DEFAULT" />
-                                 </cursor></FontAwesomeIcon>
+                              <FontAwesomeIcon fill="#39daf7" iconName="KEY"></FontAwesomeIcon>
                            </children>
                            <VBox.margin>
                               <Insets top="30.0" />
@@ -95,9 +89,7 @@
                            <font>
                               <Font name="System Bold" size="16.0" />
                            </font>
-                           <cursor>
-                              <Cursor fx:constant="HAND" />
-                           </cursor></Button>
+                        </Button>
                         <HBox fx:id="hypForgetU" alignment="BOTTOM_CENTER" VBox.vgrow="ALWAYS">
                            <padding>
                               <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
@@ -110,9 +102,6 @@
                                  <font>
                                     <Font name="System Bold" size="12.0" />
                                  </font>
-                                 <cursor>
-                                    <Cursor fx:constant="HAND" />
-                                 </cursor>
                               </Text>
                               <Text fx:id="hypForgetP" fill="#7ae3f5" strokeType="OUTSIDE" strokeWidth="0.0" text="Esqueci minha senha" underline="true">
                                  <HBox.margin>
@@ -121,9 +110,6 @@
                                  <font>
                                     <Font name="System Bold" size="12.0" />
                                  </font>
-                                 <cursor>
-                                    <Cursor fx:constant="HAND" />
-                                 </cursor>
                               </Text>
                            </children>
                         </HBox>

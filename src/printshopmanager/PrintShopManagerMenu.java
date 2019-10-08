@@ -1,7 +1,6 @@
 
 package printshopmanager;
 
-import javafx.scene.image.Image;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -10,7 +9,7 @@ import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 
-public class PrintShopManager extends Application {
+public class PrintShopManagerMenu extends Application {
     
     private double x, y;
     private void dragDrop(Stage stage, Parent root) throws Exception {
@@ -25,30 +24,24 @@ public class PrintShopManager extends Application {
             stage.setY(event.getScreenY() - y);
         });
     }
-    
-    private String fxmlLoader = "TelaLogin.fxml";
-    
-    public void setLoader(String loader){
-        this.fxmlLoader = loader;
-    }
-    
+
     @Override
     public void start(Stage stage) throws Exception {
-        Parent root = FXMLLoader.load(getClass().getResource(fxmlLoader));
+        Parent root = FXMLLoader.load(getClass().getResource("TelaMenu.fxml"));
         
         Scene scene = new Scene(root);
         
         dragDrop(stage, root);
         stage.centerOnScreen();
         
-        stage.initStyle(StageStyle.UNDECORATED);
+        
         stage.setScene(scene);
+        stage.initStyle(StageStyle.UNDECORATED);
         stage.show();
-
-	stage.getIcons().add(new Image(getClass().getResourceAsStream("/images/icon.png")));
     }
-
+    
     public static void main(String[] args) {
         launch(args);
     }
+    
 }
