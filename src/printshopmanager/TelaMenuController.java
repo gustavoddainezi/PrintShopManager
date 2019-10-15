@@ -21,7 +21,7 @@ public class TelaMenuController implements Initializable {
     
     @FXML
     private AnchorPane main;
-    
+     
     @FXML
     private JFXDrawer drawer;
 

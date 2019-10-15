@@ -35,3 +35,7 @@
 #open{
     -fx-background-color: #002A47;
 }
+
+FontAwesomeIcon {
+    -fx-cursor: hand;
+}
