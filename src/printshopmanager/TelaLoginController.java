@@ -91,7 +91,7 @@ public class TelaLoginController implements Initializable {
                     Node node = (Node) event.getSource();
                     Stage stage = (Stage) node.getScene().getWindow();
                     stage.close();
-                    menu.setLoader("TelaMenu.fxml");
+                    menu.setLoader("TelaPrincipal.fxml");
                     menu.start(new Stage());
                     break;
                 }

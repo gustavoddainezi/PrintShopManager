@@ -11,7 +11,7 @@
 
 <AnchorPane prefHeight="590.0" prefWidth="930.0" style="-fx-background-color: #FFFFFF;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <HBox alignment="CENTER_RIGHT" layoutX="175.0" layoutY="20.0" maxWidth="-Infinity" prefWidth="250.0" style="-fx-background-color: #FFFFFF; -fx-border-color: #FFFFFF; -fx-border-width: 0px 0px 2px 0px; -fx-border-color: #000000;">
+      <HBox alignment="CENTER_RIGHT" layoutX="175.0" layoutY="53.0" maxWidth="-Infinity" prefWidth="250.0" style="-fx-background-color: #FFFFFF; -fx-border-color: #FFFFFF; -fx-border-width: 0px 0px 2px 0px; -fx-border-color: #000000;">
          <children>
             <TextField fx:id="txtCliente" promptText="Cliente" style="-fx-background-color: transparent; -fx-text-fill: black; -fx-prompt-text-fill: black; -fx-cursor: text;" styleClass="textField" HBox.hgrow="ALWAYS">
                <HBox.margin>
@@ -23,7 +23,7 @@
             </TextField>
          </children>
       </HBox>
-      <HBox alignment="CENTER_RIGHT" layoutX="491.0" layoutY="20.0" maxWidth="-Infinity" prefWidth="250.0" style="-fx-background-color: #FFFFFF; -fx-border-color: #FFFFFF; -fx-border-width: 0px 0px 2px 0px; -fx-border-color: #000000;">
+      <HBox alignment="CENTER_RIGHT" layoutX="491.0" layoutY="53.0" maxWidth="-Infinity" prefWidth="250.0" style="-fx-background-color: #FFFFFF; -fx-border-color: #FFFFFF; -fx-border-width: 0px 0px 2px 0px; -fx-border-color: #000000;">
          <children>
             <TextField fx:id="txtCPFCliente" promptText="CPF Cliente" style="-fx-background-color: transparent; -fx-text-fill: black; -fx-prompt-text-fill: black; -fx-cursor: text;" styleClass="textField" HBox.hgrow="ALWAYS">
                <HBox.margin>
@@ -35,7 +35,7 @@
             </TextField>
          </children>
       </HBox>
-      <HBox alignment="CENTER_RIGHT" layoutX="491.0" layoutY="109.0" maxWidth="-Infinity" prefWidth="250.0" style="-fx-background-color: #FFFFFF; -fx-border-color: #FFFFFF; -fx-border-width: 0px 0px 2px 0px; -fx-border-color: #000000;">
+      <HBox alignment="CENTER_RIGHT" layoutX="491.0" layoutY="142.0" maxWidth="-Infinity" prefWidth="250.0" style="-fx-background-color: #FFFFFF; -fx-border-color: #FFFFFF; -fx-border-width: 0px 0px 2px 0px; -fx-border-color: #000000;">
          <children>
             <TextField fx:id="txtProduto111" promptText="Forma de pagamento" style="-fx-background-color: transparent; -fx-text-fill: black; -fx-prompt-text-fill: black; -fx-cursor: text;" styleClass="textField" HBox.hgrow="ALWAYS">
                <HBox.margin>
@@ -47,7 +47,7 @@
             </TextField>
          </children>
       </HBox>
-      <HBox alignment="CENTER_RIGHT" layoutX="175.0" layoutY="202.0" maxWidth="-Infinity" prefWidth="250.0" style="-fx-background-color: #FFFFFF; -fx-border-color: #FFFFFF; -fx-border-width: 0px 0px 2px 0px; -fx-border-color: #000000;">
+      <HBox alignment="CENTER_RIGHT" layoutX="175.0" layoutY="235.0" maxWidth="-Infinity" prefWidth="250.0" style="-fx-background-color: #FFFFFF; -fx-border-color: #FFFFFF; -fx-border-width: 0px 0px 2px 0px; -fx-border-color: #000000;">
          <children>
             <TextField fx:id="txtProduto" promptText="Produto" style="-fx-background-color: transparent; -fx-text-fill: black; -fx-prompt-text-fill: black; -fx-cursor: text;" styleClass="textField" HBox.hgrow="ALWAYS">
                <HBox.margin>
@@ -59,7 +59,7 @@
             </TextField>
          </children>
       </HBox>
-      <HBox alignment="CENTER_RIGHT" layoutX="491.0" layoutY="202.0" maxWidth="-Infinity" prefWidth="250.0" style="-fx-background-color: #FFFFFF; -fx-border-color: #FFFFFF; -fx-border-width: 0px 0px 2px 0px; -fx-border-color: #000000;">
+      <HBox alignment="CENTER_RIGHT" layoutX="491.0" layoutY="235.0" maxWidth="-Infinity" prefWidth="250.0" style="-fx-background-color: #FFFFFF; -fx-border-color: #FFFFFF; -fx-border-width: 0px 0px 2px 0px; -fx-border-color: #000000;">
          <children>
             <TextField fx:id="txtQtd" promptText="Quantidade" style="-fx-background-color: transparent; -fx-text-fill: black; -fx-prompt-text-fill: black; -fx-cursor: text;" styleClass="textField" HBox.hgrow="ALWAYS">
                <HBox.margin>
@@ -71,7 +71,7 @@
             </TextField>
          </children>
       </HBox>
-      <HBox alignment="CENTER_RIGHT" layoutX="175.0" layoutY="297.0" maxWidth="-Infinity" prefWidth="250.0" style="-fx-background-color: #FFFFFF; -fx-border-color: #FFFFFF; -fx-border-width: 0px 0px 2px 0px; -fx-border-color: #000000;">
+      <HBox alignment="CENTER_RIGHT" layoutX="175.0" layoutY="330.0" maxWidth="-Infinity" prefWidth="250.0" style="-fx-background-color: #FFFFFF; -fx-border-color: #FFFFFF; -fx-border-width: 0px 0px 2px 0px; -fx-border-color: #000000;">
          <children>
             <TextField fx:id="txtEspecificacao" promptText="Especificação" style="-fx-background-color: transparent; -fx-text-fill: black; -fx-prompt-text-fill: black; -fx-cursor: text;" styleClass="textField" HBox.hgrow="ALWAYS">
                <HBox.margin>
@@ -83,7 +83,7 @@
             </TextField>
          </children>
       </HBox>
-      <HBox alignment="CENTER_RIGHT" layoutX="491.0" layoutY="297.0" maxWidth="-Infinity" prefWidth="100.0" style="-fx-background-color: #FFFFFF; -fx-border-color: #FFFFFF; -fx-border-width: 0px 0px 2px 0px; -fx-border-color: #000000;">
+      <HBox alignment="CENTER_RIGHT" layoutX="491.0" layoutY="330.0" maxWidth="-Infinity" prefWidth="100.0" style="-fx-background-color: #FFFFFF; -fx-border-color: #FFFFFF; -fx-border-width: 0px 0px 2px 0px; -fx-border-color: #000000;">
          <children>
             <TextField fx:id="txtCor1" prefHeight="29.0" prefWidth="72.0" promptText="Cor 1" style="-fx-background-color: transparent; -fx-text-fill: black; -fx-prompt-text-fill: black; -fx-cursor: text;" styleClass="textField" HBox.hgrow="ALWAYS">
                <HBox.margin>
@@ -95,17 +95,17 @@
             </TextField>
          </children>
       </HBox>
-      <HBox alignment="CENTER_RIGHT" layoutX="175.0" layoutY="119.0" maxWidth="-Infinity" prefWidth="250.0" style="-fx-background-color: #FFFFFF; -fx-border-color: #FFFFFF; -fx-border-width: 0px 0px 2px 0px; -fx-border-color: #000000;">
+      <HBox alignment="CENTER_RIGHT" layoutX="175.0" layoutY="152.0" maxWidth="-Infinity" prefWidth="250.0" style="-fx-background-color: #FFFFFF; -fx-border-color: #FFFFFF; -fx-border-width: 0px 0px 2px 0px; -fx-border-color: #000000;">
          <children>
             <DatePicker fx:id="dtpEntrega" prefHeight="29.0" prefWidth="250.0" promptText="Data de entrega" style="-fx-background-color: transparent;" />
          </children>
       </HBox>
-      <Label layoutX="599.0" layoutY="304.0" text="/">
+      <Label layoutX="599.0" layoutY="337.0" text="/">
          <font>
             <Font name="Century Gothic" size="22.0" />
          </font>
       </Label>
-      <HBox alignment="CENTER_RIGHT" layoutX="616.0" layoutY="297.0" maxWidth="-Infinity" prefWidth="100.0" style="-fx-background-color: #FFFFFF; -fx-border-color: #FFFFFF; -fx-border-width: 0px 0px 2px 0px; -fx-border-color: #000000;">
+      <HBox alignment="CENTER_RIGHT" layoutX="616.0" layoutY="330.0" maxWidth="-Infinity" prefWidth="100.0" style="-fx-background-color: #FFFFFF; -fx-border-color: #FFFFFF; -fx-border-width: 0px 0px 2px 0px; -fx-border-color: #000000;">
          <children>
             <TextField fx:id="txtCor2" prefHeight="29.0" prefWidth="72.0" promptText="Cor 2" style="-fx-background-color: transparent; -fx-text-fill: black; -fx-prompt-text-fill: black; -fx-cursor: text;" styleClass="textField" HBox.hgrow="ALWAYS">
                <HBox.margin>
@@ -117,16 +117,16 @@
             </TextField>
          </children>
       </HBox>
-      <Button fx:id="btnEmitir" layoutX="161.0" layoutY="492.0" mnemonicParsing="false" prefWidth="180.0" style="-fx-background-color: #00B2E6; -fx-background-radius: 10px; -fx-text-fill: white;" text="Emitir Orçamento">
+      <Button fx:id="btnEmitir" layoutX="210.0" layoutY="526.0" mnemonicParsing="false" prefWidth="180.0" style="-fx-background-color: #00B2E6; -fx-background-radius: 10px; -fx-text-fill: white;" text="Emitir Orçamento">
          <font>
             <Font name="System Bold" size="17.0" />
          </font>
       </Button>
-      <Button fx:id="btnLimpar" layoutX="589.0" layoutY="493.0" mnemonicParsing="false" prefWidth="180.0" style="-fx-background-color: #00B2E6; -fx-background-radius: 10px; -fx-text-fill: white;" text="Limpar">
+      <Button fx:id="btnLimpar" layoutX="519.0" layoutY="526.0" mnemonicParsing="false" prefWidth="180.0" style="-fx-background-color: #00B2E6; -fx-background-radius: 10px; -fx-text-fill: white;" text="Limpar">
          <font>
             <Font name="System Bold" size="17.0" />
          </font>
       </Button>
-      <AnchorPane layoutX="173.0" layoutY="350.0" prefHeight="122.0" prefWidth="566.0" style="-fx-border-color: #000000;" />
+      <AnchorPane layoutX="173.0" layoutY="383.0" prefHeight="122.0" prefWidth="566.0" style="-fx-border-color: #000000;" />
    </children>
 </AnchorPane>

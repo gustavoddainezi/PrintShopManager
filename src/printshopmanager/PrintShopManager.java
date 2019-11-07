@@ -34,7 +34,7 @@ public class PrintShopManager extends Application {
     
     @Override
     public void start(Stage stage) throws Exception {
-        Parent root = FXMLLoader.load(getClass().getResource(fxmlLoader));
+        Parent root = FXMLLoader.load(getClass().getResource(this.fxmlLoader));
         
         Scene scene = new Scene(root);
         

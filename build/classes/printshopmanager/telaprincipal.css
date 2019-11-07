@@ -1,0 +1,27 @@
+
+.mainFxmlClass {
+
+}
+
+.hamburger-piece{
+    -fx-border-width: 6px 0px 0px 0px;
+    -fx-border-color: #6e7e8a;/*#88a2e8*/
+}
+
+.hamburger{
+    -fx-cursor: hand;
+}
+
+.menu-button{
+    -fx-text-fill: #ffffff;
+    -fx-text-alignment: center;
+}
+
+.menu-button:hover{
+    -fx-background-color: #4286f4;/*#39daf7*/
+    -fx-cursor: hand;
+}
+
+.vBoxMenu{
+    -fx-background-color: #002A47;
+}
