@@ -1,132 +1,457 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import java.lang.String?>
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.DatePicker?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.effect.DropShadow?>
 <?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="590.0" prefWidth="930.0" style="-fx-background-color: #FFFFFF;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
-   <children>
-      <HBox alignment="CENTER_RIGHT" layoutX="175.0" layoutY="53.0" maxWidth="-Infinity" prefWidth="250.0" style="-fx-background-color: #FFFFFF; -fx-border-color: #FFFFFF; -fx-border-width: 0px 0px 2px 0px; -fx-border-color: #000000;">
-         <children>
-            <TextField fx:id="txtCliente" promptText="Cliente" style="-fx-background-color: transparent; -fx-text-fill: black; -fx-prompt-text-fill: black; -fx-cursor: text;" styleClass="textField" HBox.hgrow="ALWAYS">
-               <HBox.margin>
-                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
-               </HBox.margin>
-               <font>
-                  <Font name="Century Gothic" size="15.0" />
-               </font>
-            </TextField>
-         </children>
-      </HBox>
-      <HBox alignment="CENTER_RIGHT" layoutX="491.0" layoutY="53.0" maxWidth="-Infinity" prefWidth="250.0" style="-fx-background-color: #FFFFFF; -fx-border-color: #FFFFFF; -fx-border-width: 0px 0px 2px 0px; -fx-border-color: #000000;">
-         <children>
-            <TextField fx:id="txtCPFCliente" promptText="CPF Cliente" style="-fx-background-color: transparent; -fx-text-fill: black; -fx-prompt-text-fill: black; -fx-cursor: text;" styleClass="textField" HBox.hgrow="ALWAYS">
-               <HBox.margin>
-                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
-               </HBox.margin>
-               <font>
-                  <Font name="Century Gothic" size="15.0" />
-               </font>
-            </TextField>
-         </children>
-      </HBox>
-      <HBox alignment="CENTER_RIGHT" layoutX="491.0" layoutY="142.0" maxWidth="-Infinity" prefWidth="250.0" style="-fx-background-color: #FFFFFF; -fx-border-color: #FFFFFF; -fx-border-width: 0px 0px 2px 0px; -fx-border-color: #000000;">
-         <children>
-            <TextField fx:id="txtProduto111" promptText="Forma de pagamento" style="-fx-background-color: transparent; -fx-text-fill: black; -fx-prompt-text-fill: black; -fx-cursor: text;" styleClass="textField" HBox.hgrow="ALWAYS">
-               <HBox.margin>
-                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
-               </HBox.margin>
-               <font>
-                  <Font name="Century Gothic" size="15.0" />
-               </font>
-            </TextField>
-         </children>
-      </HBox>
-      <HBox alignment="CENTER_RIGHT" layoutX="175.0" layoutY="235.0" maxWidth="-Infinity" prefWidth="250.0" style="-fx-background-color: #FFFFFF; -fx-border-color: #FFFFFF; -fx-border-width: 0px 0px 2px 0px; -fx-border-color: #000000;">
-         <children>
-            <TextField fx:id="txtProduto" promptText="Produto" style="-fx-background-color: transparent; -fx-text-fill: black; -fx-prompt-text-fill: black; -fx-cursor: text;" styleClass="textField" HBox.hgrow="ALWAYS">
-               <HBox.margin>
-                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
-               </HBox.margin>
-               <font>
-                  <Font name="Century Gothic" size="15.0" />
-               </font>
-            </TextField>
-         </children>
-      </HBox>
-      <HBox alignment="CENTER_RIGHT" layoutX="491.0" layoutY="235.0" maxWidth="-Infinity" prefWidth="250.0" style="-fx-background-color: #FFFFFF; -fx-border-color: #FFFFFF; -fx-border-width: 0px 0px 2px 0px; -fx-border-color: #000000;">
-         <children>
-            <TextField fx:id="txtQtd" promptText="Quantidade" style="-fx-background-color: transparent; -fx-text-fill: black; -fx-prompt-text-fill: black; -fx-cursor: text;" styleClass="textField" HBox.hgrow="ALWAYS">
-               <HBox.margin>
-                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
-               </HBox.margin>
-               <font>
-                  <Font name="Century Gothic" size="15.0" />
-               </font>
-            </TextField>
-         </children>
-      </HBox>
-      <HBox alignment="CENTER_RIGHT" layoutX="175.0" layoutY="330.0" maxWidth="-Infinity" prefWidth="250.0" style="-fx-background-color: #FFFFFF; -fx-border-color: #FFFFFF; -fx-border-width: 0px 0px 2px 0px; -fx-border-color: #000000;">
-         <children>
-            <TextField fx:id="txtEspecificacao" promptText="Especificação" style="-fx-background-color: transparent; -fx-text-fill: black; -fx-prompt-text-fill: black; -fx-cursor: text;" styleClass="textField" HBox.hgrow="ALWAYS">
-               <HBox.margin>
-                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
-               </HBox.margin>
-               <font>
-                  <Font name="Century Gothic" size="15.0" />
-               </font>
-            </TextField>
-         </children>
-      </HBox>
-      <HBox alignment="CENTER_RIGHT" layoutX="491.0" layoutY="330.0" maxWidth="-Infinity" prefWidth="100.0" style="-fx-background-color: #FFFFFF; -fx-border-color: #FFFFFF; -fx-border-width: 0px 0px 2px 0px; -fx-border-color: #000000;">
-         <children>
-            <TextField fx:id="txtCor1" prefHeight="29.0" prefWidth="72.0" promptText="Cor 1" style="-fx-background-color: transparent; -fx-text-fill: black; -fx-prompt-text-fill: black; -fx-cursor: text;" styleClass="textField" HBox.hgrow="ALWAYS">
-               <HBox.margin>
-                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
-               </HBox.margin>
-               <font>
-                  <Font name="Century Gothic" size="15.0" />
-               </font>
-            </TextField>
-         </children>
-      </HBox>
-      <HBox alignment="CENTER_RIGHT" layoutX="175.0" layoutY="152.0" maxWidth="-Infinity" prefWidth="250.0" style="-fx-background-color: #FFFFFF; -fx-border-color: #FFFFFF; -fx-border-width: 0px 0px 2px 0px; -fx-border-color: #000000;">
-         <children>
-            <DatePicker fx:id="dtpEntrega" prefHeight="29.0" prefWidth="250.0" promptText="Data de entrega" style="-fx-background-color: transparent;" />
-         </children>
-      </HBox>
-      <Label layoutX="599.0" layoutY="337.0" text="/">
-         <font>
-            <Font name="Century Gothic" size="22.0" />
-         </font>
-      </Label>
-      <HBox alignment="CENTER_RIGHT" layoutX="616.0" layoutY="330.0" maxWidth="-Infinity" prefWidth="100.0" style="-fx-background-color: #FFFFFF; -fx-border-color: #FFFFFF; -fx-border-width: 0px 0px 2px 0px; -fx-border-color: #000000;">
-         <children>
-            <TextField fx:id="txtCor2" prefHeight="29.0" prefWidth="72.0" promptText="Cor 2" style="-fx-background-color: transparent; -fx-text-fill: black; -fx-prompt-text-fill: black; -fx-cursor: text;" styleClass="textField" HBox.hgrow="ALWAYS">
-               <HBox.margin>
-                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
-               </HBox.margin>
-               <font>
-                  <Font name="Century Gothic" size="15.0" />
-               </font>
-            </TextField>
-         </children>
-      </HBox>
-      <Button fx:id="btnEmitir" layoutX="210.0" layoutY="526.0" mnemonicParsing="false" prefWidth="180.0" style="-fx-background-color: #00B2E6; -fx-background-radius: 10px; -fx-text-fill: white;" text="Emitir Orçamento">
-         <font>
-            <Font name="System Bold" size="17.0" />
-         </font>
-      </Button>
-      <Button fx:id="btnLimpar" layoutX="519.0" layoutY="526.0" mnemonicParsing="false" prefWidth="180.0" style="-fx-background-color: #00B2E6; -fx-background-radius: 10px; -fx-text-fill: white;" text="Limpar">
-         <font>
-            <Font name="System Bold" size="17.0" />
-         </font>
-      </Button>
-      <AnchorPane layoutX="173.0" layoutY="383.0" prefHeight="122.0" prefWidth="566.0" style="-fx-border-color: #000000;" />
-   </children>
+<AnchorPane prefHeight="590.0" prefWidth="930.0" stylesheets="@style.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+    <children>
+        <TabPane layoutX="-1.0" prefHeight="700.0" prefWidth="1200.0" styleClass="bg-white" tabClosingPolicy="UNAVAILABLE" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="50.0">
+            <tabs>
+                <Tab text="Orçamento">
+                    <content>
+                        <AnchorPane prefHeight="617.0" prefWidth="200.0">
+                            <children>
+                                <ComboBox layoutX="14.0" layoutY="92.0" prefHeight="29.0" prefWidth="189.0" promptText="Modelo do Produto">
+                                    <styleClass>
+                                        <String fx:value="bg-transparent" />
+                                        <String fx:value="field-border" />
+                                        <String fx:value="font-field" />
+                                        <String fx:value="hand" />
+                                    </styleClass>
+                                </ComboBox>
+                                <TextField layoutX="226.0" layoutY="92.0" prefHeight="29.0" prefWidth="134.0" promptText="Quantidade">
+                                    <styleClass>
+                                        <String fx:value="bg-transparent" />
+                                        <String fx:value="field-border" />
+                                        <String fx:value="font-field" />
+                                    </styleClass>
+                                </TextField>
+                                <TextField layoutX="381.0" layoutY="92.0" prefHeight="29.0" prefWidth="235.0" promptText="Descrição">
+                                    <styleClass>
+                                        <String fx:value="bg-transparent" />
+                                        <String fx:value="field-border" />
+                                        <String fx:value="font-field" />
+                                    </styleClass>
+                                </TextField>
+                                <ComboBox layoutX="641.0" layoutY="92.0" prefHeight="29.0" prefWidth="162.0" promptText="Substrato">
+                                    <styleClass>
+                                        <String fx:value="bg-transparent" />
+                                        <String fx:value="field-border" />
+                                        <String fx:value="font-field" />
+                                    </styleClass>
+                                </ComboBox>
+                                <Label layoutX="825.0" layoutY="98.0" styleClass="font-field" text="Valor Substrato: " />
+                                <Label layoutX="1009.0" layoutY="98.0" styleClass="font-field" text="Índice de Desperdicio: " />
+                                <TitledPane animated="false" layoutX="14.0" layoutY="126.0" prefHeight="271.0" prefWidth="603.0" text="Itens Adicionados">
+                                    <content>
+                                        <AnchorPane prefHeight="219.0" prefWidth="601.0" styleClass="bg-white" />
+                                    </content>
+                                </TitledPane>
+                                <TitledPane animated="false" layoutX="623.0" layoutY="174.0" prefHeight="124.0" prefWidth="186.0" text="Adicionais">
+                                    <content>
+                                        <AnchorPane prefHeight="89.0" prefWidth="230.0" styleClass="bg-white">
+                                            <children>
+                                                <CheckBox layoutX="8.0" layoutY="7.0" mnemonicParsing="false" text="Substrato pré Impressão">
+                                                    <styleClass>
+                                                        <String fx:value="hand" />
+                                                        <String fx:value="font-field" />
+                                                    </styleClass>
+                                                </CheckBox>
+                                                <CheckBox layoutX="8.0" layoutY="34.0" mnemonicParsing="false" text="Acerto">
+                                                    <styleClass>
+                                                        <String fx:value="hand" />
+                                                        <String fx:value="font-field" />
+                                                    </styleClass>
+                                                </CheckBox>
+                                                <CheckBox layoutX="8.0" layoutY="59.0" mnemonicParsing="false" text="Lavação">
+                                                    <styleClass>
+                                                        <String fx:value="hand" />
+                                                        <String fx:value="font-field" />
+                                                    </styleClass>
+                                                </CheckBox>
+                                            </children>
+                                        </AnchorPane>
+                                    </content>
+                                </TitledPane>
+                                <TextField layoutX="621.0" layoutY="135.0" prefHeight="29.0" prefWidth="82.0" promptText="Cor 1">
+                                    <styleClass>
+                                        <String fx:value="bg-transparent" />
+                                        <String fx:value="field-border" />
+                                        <String fx:value="font-field" />
+                                    </styleClass>
+                                </TextField>
+                                <Label layoutX="714.0" layoutY="137.0" style="-fx-font-size: 18;" text="/" />
+                                <TextField layoutX="730.0" layoutY="136.0" prefHeight="29.0" prefWidth="82.0" promptText="Cor 2">
+                                    <styleClass>
+                                        <String fx:value="bg-transparent" />
+                                        <String fx:value="field-border" />
+                                        <String fx:value="font-field" />
+                                    </styleClass>
+                                </TextField>
+                                <TitledPane animated="false" layoutX="848.0" layoutY="174.0" prefHeight="125.0" prefWidth="344.0" text="Quantidade Adicional">
+                                    <content>
+                                        <AnchorPane prefHeight="98.0" prefWidth="337.0" styleClass="bg-white">
+                                            <children>
+                                                <TextField layoutX="7.0" layoutY="2.0" prefHeight="29.0" prefWidth="108.0" promptText="Acerto">
+                                                    <styleClass>
+                                                        <String fx:value="bg-transparent" />
+                                                        <String fx:value="field-border" />
+                                                        <String fx:value="font-field" />
+                                                    </styleClass>
+                                                </TextField>
+                                                <TextField layoutX="136.0" layoutY="2.0" prefHeight="29.0" prefWidth="112.0" promptText="Lavação">
+                                                    <styleClass>
+                                                        <String fx:value="bg-transparent" />
+                                                        <String fx:value="field-border" />
+                                                        <String fx:value="font-field" />
+                                                    </styleClass>
+                                                </TextField>
+                                                <TextField layoutX="7.0" layoutY="49.0" prefHeight="29.0" prefWidth="112.0" promptText="Substrato">
+                                                    <styleClass>
+                                                        <String fx:value="bg-transparent" />
+                                                        <String fx:value="field-border" />
+                                                        <String fx:value="font-field" />
+                                                    </styleClass>
+                                                </TextField>
+                                            </children>
+                                        </AnchorPane>
+                                    </content>
+                                </TitledPane>
+                                <TextField layoutX="624.0" layoutY="316.0" prefHeight="29.0" prefWidth="130.0" promptText="Largura">
+                                    <styleClass>
+                                        <String fx:value="bg-transparent" />
+                                        <String fx:value="field-border" />
+                                        <String fx:value="font-field" />
+                                    </styleClass>
+                                </TextField>
+                                <TextField layoutX="624.0" layoutY="361.0" prefHeight="29.0" prefWidth="133.0" promptText="Sangria (Altura)">
+                                    <styleClass>
+                                        <String fx:value="bg-transparent" />
+                                        <String fx:value="field-border" />
+                                        <String fx:value="font-field" />
+                                    </styleClass>
+                                </TextField>
+                                <TextField layoutX="774.0" layoutY="316.0" prefHeight="29.0" prefWidth="138.0" promptText="Altura">
+                                    <styleClass>
+                                        <String fx:value="bg-transparent" />
+                                        <String fx:value="field-border" />
+                                        <String fx:value="font-field" />
+                                    </styleClass>
+                                </TextField>
+                                <TextField layoutX="774.0" layoutY="361.0" prefHeight="29.0" prefWidth="139.0" promptText="Sangria (Largura)">
+                                    <styleClass>
+                                        <String fx:value="bg-transparent" />
+                                        <String fx:value="field-border" />
+                                        <String fx:value="font-field" />
+                                    </styleClass>
+                                </TextField>
+                                <TitledPane animated="false" layoutX="928.0" layoutY="305.0" prefHeight="104.0" prefWidth="259.0" text="Tarefas Adicionais">
+                                    <content>
+                                        <AnchorPane prefHeight="75.0" prefWidth="257.0" styleClass="bg-white">
+                                            <children>
+                                                <CheckBox layoutX="8.0" layoutY="7.0" mnemonicParsing="false" text="Guilhotina - inicial (Acerto)">
+                                                    <styleClass>
+                                                        <String fx:value="hand" />
+                                                        <String fx:value="font-field" />
+                                                    </styleClass>
+                                                </CheckBox>
+                                                <CheckBox layoutX="8.0" layoutY="34.0" mnemonicParsing="false" text="Guilhotina - Refile Final (Acerto)">
+                                                    <styleClass>
+                                                        <String fx:value="hand" />
+                                                        <String fx:value="font-field" />
+                                                    </styleClass>
+                                                </CheckBox>
+                                                <CheckBox layoutX="8.0" layoutY="59.0" mnemonicParsing="false" text="Dobra (Acerto)">
+                                                    <styleClass>
+                                                        <String fx:value="hand" />
+                                                        <String fx:value="font-field" />
+                                                    </styleClass>
+                                                </CheckBox>
+                                            </children>
+                                        </AnchorPane>
+                                    </content>
+                                </TitledPane>
+                                <Button fx:id="btnEmitir" layoutX="200.0" layoutY="598.0" mnemonicParsing="false" prefWidth="180.0" text="Emitir Orçamento">
+                                    <font>
+                                        <Font name="System Bold" size="17.0" />
+                                    </font>
+                                    <styleClass>
+                                        <String fx:value="btn" />
+                                        <String fx:value="font-field" />
+                                    </styleClass>
+                                </Button>
+                                <Button fx:id="btnLimpar" layoutX="800.0" layoutY="598.0" mnemonicParsing="false" prefWidth="180.0" text="Limpar">
+                                    <font>
+                                        <Font name="System Bold" size="17.0" />
+                                    </font>
+                                    <styleClass>
+                                        <String fx:value="btn" />
+                                        <String fx:value="font-field" />
+                                    </styleClass>
+                                </Button>
+                                <TitledPane animated="false" layoutX="14.0" layoutY="402.0" prefHeight="174.0" prefWidth="604.0" text="Tintas">
+                                    <content>
+                                        <AnchorPane prefHeight="147.0" prefWidth="526.0" styleClass="bg-white" />
+                                    </content>
+                                </TitledPane>
+                                <TitledPane animated="false" layoutX="8.0" layoutY="3.0" prefHeight="85.0" prefWidth="1200.0" text="Cabeçalho" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                    <content>
+                                        <AnchorPane prefHeight="200.0" prefWidth="200.0" styleClass="bg-white">
+                                            <children>
+                                                <Label layoutX="920.0" layoutY="16.0" styleClass="font-field" text="Data orçamento: " AnchorPane.leftAnchor="920.0" />
+                                                <TextField layoutX="177.0" layoutY="10.0" prefHeight="29.0" prefWidth="263.0" promptText="Cliente" AnchorPane.leftAnchor="170.0">
+                                                    <styleClass>
+                                                        <String fx:value="bg-transparent" />
+                                                        <String fx:value="field-border" />
+                                                        <String fx:value="font-field" />
+                                                    </styleClass>
+                                                </TextField>
+                                                <DatePicker layoutX="450.0" layoutY="10.0" prefWidth="200.0" promptText="Data de Entrega" AnchorPane.leftAnchor="450.0">
+                                                    <styleClass>
+                                                        <String fx:value="bg-transparent" />
+                                                        <String fx:value="field-border" />
+                                                        <String fx:value="font-field" />
+                                                    </styleClass>
+                                                </DatePicker>
+                                                <ComboBox layoutX="679.6" layoutY="10.0" prefHeight="29.0" prefWidth="210.0" promptText="Forma de Pagamento" AnchorPane.leftAnchor="670.0">
+                                                    <styleClass>
+                                                        <String fx:value="bg-transparent" />
+                                                        <String fx:value="field-border" />
+                                                        <String fx:value="font-field" />
+                                                        <String fx:value="hand" />
+                                                    </styleClass>
+                                                </ComboBox>
+                                                <TextField layoutX="14.0" layoutY="10.0" prefHeight="29.0" prefWidth="154.0" promptText="CPF Cliente">
+                                                    <styleClass>
+                                                        <String fx:value="bg-transparent" />
+                                                        <String fx:value="field-border" />
+                                                        <String fx:value="font-field" />
+                                                    </styleClass>
+                                                </TextField>
+                                            </children>
+                                        </AnchorPane>
+                                    </content>
+                                </TitledPane>
+                                <Button fx:id="btnLimpar1" layoutX="500.0" layoutY="598.0" mnemonicParsing="false" prefWidth="180.0" text="Add Item">
+                                    <font>
+                                        <Font name="System Bold" size="17.0" />
+                                    </font>
+                                    <styleClass>
+                                        <String fx:value="btn" />
+                                        <String fx:value="font-field" />
+                                    </styleClass>
+                                </Button>
+                            </children>
+                        </AnchorPane>
+                    </content>
+                </Tab>
+                <Tab text="Emissão de Pedido">
+                    <content>
+                        <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                            <children>
+                                <VBox layoutX="14.0" layoutY="14.0" prefHeight="215.0" prefWidth="300.0">
+                                    <effect>
+                                        <DropShadow height="10.0" radius="4.5" width="10.0" />
+                                    </effect>
+                                    <styleClass>
+                                        <String fx:value="bg-white" />
+                                        <String fx:value="vbox-container" />
+                                    </styleClass>
+                                    <children>
+                                        <Label styleClass="font-field" text="Preço Final:">
+                                            <VBox.margin>
+                                                <Insets left="20.0" top="15.0" />
+                                            </VBox.margin>
+                                        </Label>
+                                        <Label text="R$ 800,00">
+                                            <VBox.margin>
+                                                <Insets left="20.0" top="10.0" />
+                                            </VBox.margin>
+                                            <styleClass>
+                                                <String fx:value="font-field" />
+                                                <String fx:value="font-label-bold" />
+                                                <String fx:value="font-label-size32" />
+                                            </styleClass>
+                                        </Label>
+                                    </children>
+                                </VBox>
+                                <VBox layoutX="328.0" layoutY="14.0" prefHeight="215.0" prefWidth="300.0">
+                                    <effect>
+                                        <DropShadow height="10.0" radius="4.5" width="10.0" />
+                                    </effect>
+                                    <styleClass>
+                                        <String fx:value="bg-white" />
+                                        <String fx:value="vbox-container" />
+                                    </styleClass>
+                                    <children>
+                                        <Label styleClass="font-field" text="Taxa de Desconto:">
+                                            <VBox.margin>
+                                                <Insets left="20.0" top="15.0" />
+                                            </VBox.margin>
+                                        </Label>
+                                        <Label text="80,00%">
+                                            <styleClass>
+                                                <String fx:value="font-field" />
+                                                <String fx:value="font-label" />
+                                                <String fx:value="font-label-bold" />
+                                                <String fx:value="font-label-size32" />
+                                            </styleClass>
+                                            <VBox.margin>
+                                                <Insets left="20.0" top="10.0" />
+                                            </VBox.margin>
+                                        </Label>
+                                    </children>
+                                </VBox>
+                                <VBox layoutX="642.0" layoutY="14.0" prefHeight="215.0" prefWidth="300.0">
+                                    <effect>
+                                        <DropShadow height="10.0" radius="4.5" width="10.0" />
+                                    </effect>
+                                    <styleClass>
+                                        <String fx:value="bg-white" />
+                                        <String fx:value="vbox-container" />
+                                    </styleClass>
+                                    <children>
+                                        <Label styleClass="font-field" text="Preço Original:">
+                                            <VBox.margin>
+                                                <Insets left="20.0" top="15.0" />
+                                            </VBox.margin>
+                                        </Label>
+                                        <Label text="R$ 4000,00">
+                                            <styleClass>
+                                                <String fx:value="font-field" />
+                                                <String fx:value="font-label-size32" />
+                                                <String fx:value="font-label-bold" />
+                                            </styleClass>
+                                            <VBox.margin>
+                                                <Insets left="20.0" top="15.0" />
+                                            </VBox.margin>
+                                        </Label>
+                                    </children>
+                                </VBox>
+                                <VBox layoutX="14.0" layoutY="244.0" prefHeight="215.0" prefWidth="615.0">
+                                    <effect>
+                                        <DropShadow height="10.0" radius="4.5" width="10.0" />
+                                    </effect>
+                                    <styleClass>
+                                        <String fx:value="bg-white" />
+                                        <String fx:value="vbox-container" />
+                                    </styleClass>
+                                    <children>
+                                        <Label text="Informações do Pedido:">
+                                            <VBox.margin>
+                                                <Insets left="20.0" top="15.0" />
+                                            </VBox.margin>
+                                            <styleClass>
+                                                <String fx:value="font-field" />
+                                                <String fx:value="font-label-bold" />
+                                            </styleClass>
+                                        </Label>
+                                        <Label text="CPF Cliente:">
+                                            <styleClass>
+                                                <String fx:value="font-field" />
+                                                <String fx:value="font-label-bold" />
+                                            </styleClass>
+                                            <VBox.margin>
+                                                <Insets left="20.0" top="20.0" />
+                                            </VBox.margin>
+                                        </Label>
+                                        <Label text="Nome Cliente:">
+                                            <styleClass>
+                                                <String fx:value="font-field" />
+                                                <String fx:value="font-label-bold" />
+                                            </styleClass>
+                                            <VBox.margin>
+                                                <Insets left="20.0" top="5.0" />
+                                            </VBox.margin>
+                                        </Label>
+                                        <Label text="Forma de Pagamento:">
+                                            <styleClass>
+                                                <String fx:value="font-field" />
+                                                <String fx:value="font-label-bold" />
+                                            </styleClass>
+                                            <VBox.margin>
+                                                <Insets left="20.0" top="5.0" />
+                                            </VBox.margin>
+                                        </Label>
+                                        <Label text="Produtos:">
+                                            <styleClass>
+                                                <String fx:value="font-field" />
+                                                <String fx:value="font-label-bold" />
+                                            </styleClass>
+                                            <VBox.margin>
+                                                <Insets left="20.0" top="5.0" />
+                                            </VBox.margin>
+                                        </Label>
+                                        <Label text="Data de Entrega:">
+                                            <styleClass>
+                                                <String fx:value="font-field" />
+                                                <String fx:value="font-label-bold" />
+                                            </styleClass>
+                                            <VBox.margin>
+                                                <Insets left="20.0" top="5.0" />
+                                            </VBox.margin>
+                                        </Label>
+                                        <Label text="Preço Final:">
+                                            <styleClass>
+                                                <String fx:value="font-field" />
+                                                <String fx:value="font-label-bold" />
+                                            </styleClass>
+                                            <VBox.margin>
+                                                <Insets left="20.0" top="5.0" />
+                                            </VBox.margin>
+                                        </Label>
+                                    </children>
+                                </VBox>
+                                <Button fx:id="btnLimpar11" layoutX="702.0" layoutY="269.0" mnemonicParsing="false" prefWidth="215.0" text="Emitir Pedido">
+                                    <font>
+                                        <Font name="System Bold" size="17.0" />
+                                    </font>
+                                    <styleClass>
+                                        <String fx:value="btn" />
+                                        <String fx:value="font-field" />
+                                    </styleClass>
+                                </Button>
+                                <Button fx:id="btnLimpar111" layoutX="702.0" layoutY="331.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="215.0" text="Realizar Novo Pedido">
+                                    <font>
+                                        <Font name="System Bold" size="17.0" />
+                                    </font>
+                                    <styleClass>
+                                        <String fx:value="btn" />
+                                        <String fx:value="font-field" />
+                                    </styleClass>
+                                </Button>
+                                <Button fx:id="btnLimpar112" layoutX="702.0" layoutY="393.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="215.0" text="Imprimir Orçamento">
+                                    <font>
+                                        <Font name="System Bold" size="17.0" />
+                                    </font>
+                                    <styleClass>
+                                        <String fx:value="btn" />
+                                        <String fx:value="font-field" />
+                                    </styleClass>
+                                </Button>
+                            </children>
+                        </AnchorPane>
+                    </content>
+                </Tab>
+            </tabs>
+        </TabPane>
+    </children>
+    <styleClass>
+        <String fx:value="bg-white" />
+        <String fx:value="height-screen" />
+        <String fx:value="width-screen" />
+    </styleClass>
 </AnchorPane>

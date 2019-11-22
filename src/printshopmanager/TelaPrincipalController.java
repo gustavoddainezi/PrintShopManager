@@ -11,6 +11,7 @@ import javafx.animation.RotateTransition;
 import javafx.animation.TranslateTransition;
 import javafx.animation.Transition;
 import javafx.event.ActionEvent;
+import javafx.event.Event;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
@@ -39,34 +40,55 @@ public class TelaPrincipalController implements Initializable {
     private VBox menu;
     
     @FXML
-    void clickedFerramentas(ActionEvent event) {
+    void clickedBackup(Event event) {
+        /*loadScreen("TelaBackup");*/
+    }
+    
+    @FXML
+    void clickedClientes(Event event) {
+        loadScreen("TelaClientes");
+    }
+    
+    @FXML
+    void clickedFerramentas(Event event) {
         loadScreen("TelaFerramentas");
     }
 
     @FXML
-    void clickedFornecedores(ActionEvent event) {
+    void clickedFornecedores(Event event) {
         loadScreen("TelaFornecedores");
     }
 
     @FXML
-    void clickedFuncionarios(ActionEvent event) {
+    void clickedFuncionarios(Event event) {
         loadScreen("TelaFuncionarios");
     }
 
     @FXML
-    void clickedOrcamento(ActionEvent event) {
+    void clickedOrcamento(Event event) {
         loadScreen("TelaOrcamentos");
     }
 
     @FXML
-    void clickedProdutos(ActionEvent event) {
+    void clickedProdutos(Event event) {
         loadScreen("TelaProdutos");
+    }
+    
+    @FXML
+    void clickedRelatorios(Event event) {
+        /*loadScreen("TelaRelatorios");*/
+    }
+    
+    @FXML
+    void clickedSobre(Event event) {
+        /*loadScreen("TelaSobre");*/
     }
     
     @FXML
     void clickedHamburger(ActionEvent event) {
         Duration duracao = new Duration(300);
         int xMenu = 0;
+        int xMain = 260;
         int ang = 40;
         int xf = -10;
         int yf = 5;
@@ -76,6 +98,7 @@ public class TelaPrincipalController implements Initializable {
         int tValue = 0;
         if(this.isMenu){
             xMenu = -270;
+            xMain = 0;
             ang *= -1;
             xf = 0;
             yf = 0;
@@ -91,6 +114,7 @@ public class TelaPrincipalController implements Initializable {
         transition(rotateHamburger(duracao, ang, thirdPiece));
         transition(translateTransition(duracao, thirdPiece, xt, yt));
         transition(fadeTransition(duracao, secondPiece, fValue, tValue));
+        transition(translateTransition(duracao, main, xMain, 0));
         this.isMenu = !this.isMenu;
     }
     private boolean isMenu = false;
@@ -133,8 +157,8 @@ public class TelaPrincipalController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        loadScreen("TelaOrcamentos");
         this.menu.setTranslateX(-270);
+        this.loadScreen("TelaOrcamentos");
     }    
     
 }

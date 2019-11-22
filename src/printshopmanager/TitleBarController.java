@@ -1,4 +1,3 @@
-
 package printshopmanager;
 
 import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon;
@@ -13,9 +12,9 @@ import javafx.stage.Stage;
 public class TitleBarController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        
+
     }
-    
+
     @FXML
     private FontAwesomeIcon btnMin;
 

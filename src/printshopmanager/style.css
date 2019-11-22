@@ -1,5 +1,33 @@
+#add-plus{
+    -fx-font-size: 32px;
+}
+
+.bg-blue{
+    -fx-background-color: #00A2E8;
+}
+
+.bg-darkblue{
+    -fx-background-color: #002A47;
+}
+
+.bg-grayblue{
+    -fx-background-color: #2b3b51;
+}
+
+.bg-transparent{
+    -fx-background-color: transparent;
+}
+
 .bg-white{
     -fx-background-color: #ffffff;
+}
+
+.border-gray{
+    -fx-border-color: #a2a2a2;
+}
+
+.border-cyan{
+    -fx-border-color: #39DAF7;
 }
 
 .btn-border-none{
@@ -7,6 +35,91 @@
     -fx-cursor: hand;
 }
 
+.field-border{
+    -fx-border-width: 0px 0px 1px 0px;
+    -fx-border-color: #000000;
+}
+
 FontAwesomeIcon {
     -fx-cursor: hand;
+}
+
+.font-field{
+    -fx-font-family: "Century Gothic";
+    -fx-font-size: 14px;
+    -fx-prompt-text-fill: #000000;
+}
+
+.font-label-size32{
+    -fx-font-size: 32px;
+}
+
+.font-label-bold{
+    -fx-font-weight: bold;
+}
+
+.btn{
+    -fx-text-fill: #ffffff;
+    -fx-background-color:  #00B2E6;
+    -fx-background-radius: 10px;
+    -fx-cursor: hand;
+    -fx-font-size: 18px;
+}
+
+.hand{
+    -fx-cursor: hand;
+}
+
+.height-screen{
+    -fx-pref-height: 750px;
+}
+
+.width-screen{
+    -fx-pref-width: 1200px;
+}
+
+.tab-pane > .tab-header-area {
+    -fx-border-width: 0px 0px 1px 0px;
+    -fx-border-color: #002A47;
+    -fx-cursor: hand;
+}
+
+.tab-pane > .tab-header-area > .headers-region > .tab > .tab-container > .tab-label {
+    -fx-alignment: CENTER;
+    -fx-text-fill: #ffffff;
+    -fx-font-family: "Century Gothic";
+    -fx-font-size: 14px;
+}
+
+.tab-pane > .tab-header-area > .headers-region > .tab{
+    -fx-cursor: hand;
+}
+
+.tab-pane > .tab-header-area > .headers-region > .tab:selected {
+    -fx-border-width: 0px 0px 2px 0px;
+    -fx-border-color: #ffffff;
+}
+
+.tab-pane:focused > .tab-header-area > .headers-region > .tab:selected .focus-indicator {
+    -fx-border-width: 0;
+    -fx-border-color: transparent;
+    -fx-border-insets: 0;
+    -fx-border-radius: 0;
+}
+
+.tab-pane > .tab-header-area > .headers-region > .tab:top {
+    -fx-background-color: transparent;
+}
+
+.tab-pane > .tab-header-area > .headers-region{
+    -fx-background-color: transparent;
+}
+
+.tab-pane > .tab-header-area > .tab-header-background {
+    -fx-background-color: #002A47;
+    fx-cursor: hand;
+}
+
+.vbox-container{
+    -fx-background-radius: 10px;
 }

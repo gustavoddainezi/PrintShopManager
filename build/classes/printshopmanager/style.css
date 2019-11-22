@@ -1,8 +1,0 @@
-.btn-border-none{
-    -fx-background-color: transparent;
-    -fx-cursor: hand;
-}
-
-FontAwesomeIcon {
-    -fx-cursor: hand;
-}

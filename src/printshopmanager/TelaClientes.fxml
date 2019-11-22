@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TreeView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" stylesheets="@style.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="printshopmanager.TelaClientesController">
+   <styleClass>
+      <String fx:value="bg-white" />
+      <String fx:value="width-screen" />
+      <String fx:value="height-screen" />
+   </styleClass>
+   <children>
+      <TabPane layoutX="9.0" layoutY="10.0" prefHeight="700.0" prefWidth="1200.0" styleClass="bg-white" tabClosingPolicy="UNAVAILABLE" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="50.0">
+         <tabs>
+            <Tab text="Cadastrar Clientes">
+               <content>
+                  <AnchorPane prefHeight="617.0" prefWidth="200.0">
+                     <children>
+                        <Button fx:id="btnEmitir" layoutX="331.0" layoutY="598.0" mnemonicParsing="false" prefWidth="180.0" text="Limpar Campos">
+                           <font>
+                              <Font name="System Bold" size="17.0" />
+                           </font>
+                           <styleClass>
+                              <String fx:value="btn" />
+                              <String fx:value="font-field" />
+                           </styleClass>
+                        </Button>
+                        <Button fx:id="btnLimpar" layoutX="636.0" layoutY="598.0" mnemonicParsing="false" prefWidth="180.0" text="Limpar">
+                           <font>
+                              <Font name="System Bold" size="17.0" />
+                           </font>
+                           <styleClass>
+                              <String fx:value="btn" />
+                              <String fx:value="font-field" />
+                           </styleClass>
+                        </Button>
+                        <TextField layoutX="790.0" layoutY="33.0" prefHeight="29.0" prefWidth="263.0" promptText="Nome Fantasia">
+                           <styleClass>
+                              <String fx:value="bg-transparent" />
+                              <String fx:value="field-border" />
+                              <String fx:value="font-field" />
+                           </styleClass>
+                        </TextField>
+                        <ComboBox layoutX="479.0" layoutY="33.0" prefHeight="29.0" prefWidth="242.0" promptText="Tipo de Cliente">
+                           <styleClass>
+                              <String fx:value="bg-transparent" />
+                              <String fx:value="field-border" />
+                              <String fx:value="font-field" />
+                              <String fx:value="hand" />
+                           </styleClass>
+                        </ComboBox>
+                        <TextField layoutX="18.0" layoutY="33.0" prefHeight="29.0" prefWidth="383.0" promptText="Nome Completo" AnchorPane.leftAnchor="40.0">
+                           <styleClass>
+                              <String fx:value="bg-transparent" />
+                              <String fx:value="field-border" />
+                              <String fx:value="font-field" />
+                           </styleClass>
+                        </TextField>
+                        <TextField layoutX="479.0" layoutY="86.0" prefHeight="29.0" prefWidth="263.0" promptText="Bairro">
+                           <styleClass>
+                              <String fx:value="bg-transparent" />
+                              <String fx:value="field-border" />
+                              <String fx:value="font-field" />
+                           </styleClass>
+                        </TextField>
+                        <TextField layoutX="40.0" layoutY="86.0" prefHeight="29.0" prefWidth="383.0" promptText="Endereço">
+                           <styleClass>
+                              <String fx:value="bg-transparent" />
+                              <String fx:value="field-border" />
+                              <String fx:value="font-field" />
+                           </styleClass>
+                        </TextField>
+                        <TextField layoutX="791.0" layoutY="86.0" prefHeight="29.0" prefWidth="261.0" promptText="CEP">
+                           <styleClass>
+                              <String fx:value="bg-transparent" />
+                              <String fx:value="field-border" />
+                              <String fx:value="font-field" />
+                           </styleClass>
+                        </TextField>
+                        <TextField layoutX="40.0" layoutY="140.0" prefHeight="29.0" prefWidth="312.0" promptText="CIdade">
+                           <styleClass>
+                              <String fx:value="bg-transparent" />
+                              <String fx:value="field-border" />
+                              <String fx:value="font-field" />
+                           </styleClass>
+                        </TextField>
+                        <TextField layoutX="701.0" layoutY="140.0" prefHeight="29.0" prefWidth="356.0" promptText="Complemento">
+                           <styleClass>
+                              <String fx:value="bg-transparent" />
+                              <String fx:value="field-border" />
+                              <String fx:value="font-field" />
+                           </styleClass>
+                        </TextField>
+                        <ComboBox layoutX="391.0" layoutY="140.0" prefHeight="29.0" prefWidth="266.0" promptText="Unidade Federal">
+                           <styleClass>
+                              <String fx:value="bg-transparent" />
+                              <String fx:value="field-border" />
+                              <String fx:value="font-field" />
+                              <String fx:value="hand" />
+                           </styleClass>
+                        </ComboBox>
+                        <TextField layoutX="479.0" layoutY="195.0" prefHeight="29.0" prefWidth="263.0" promptText="CPF">
+                           <styleClass>
+                              <String fx:value="bg-transparent" />
+                              <String fx:value="field-border" />
+                              <String fx:value="font-field" />
+                           </styleClass>
+                        </TextField>
+                        <TextField layoutX="40.0" layoutY="195.0" prefHeight="29.0" prefWidth="383.0" promptText="Email">
+                           <styleClass>
+                              <String fx:value="bg-transparent" />
+                              <String fx:value="field-border" />
+                              <String fx:value="font-field" />
+                           </styleClass>
+                        </TextField>
+                        <TextField layoutX="791.0" layoutY="195.0" prefHeight="29.0" prefWidth="261.0" promptText="CNPJ">
+                           <styleClass>
+                              <String fx:value="bg-transparent" />
+                              <String fx:value="field-border" />
+                              <String fx:value="font-field" />
+                           </styleClass>
+                        </TextField>
+                        <TextField layoutX="40.0" layoutY="260.0" prefHeight="29.0" prefWidth="258.0" promptText="Telefones para Contato">
+                           <styleClass>
+                              <String fx:value="bg-transparent" />
+                              <String fx:value="field-border" />
+                              <String fx:value="font-field" />
+                           </styleClass>
+                        </TextField>
+                        <Button id="add-plus" fx:id="btnLimpar11" layoutX="310.0" layoutY="257.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="42.0" text="+">
+                           <font>
+                              <Font name="System Bold" size="17.0" />
+                           </font>
+                           <styleClass>
+                              <String fx:value="btn" />
+                              <String fx:value="font-field" />
+                           </styleClass>
+                           <padding>
+                              <Insets bottom="-3.0" left="-2.0" right="-2.0" top="-3.0" />
+                           </padding>
+                        </Button>
+                        <TreeView layoutX="40.0" layoutY="304.0" prefHeight="190.0" prefWidth="311.0" />
+                        <TextArea layoutX="479.0" layoutY="304.0" prefHeight="190.0" prefWidth="407.0" promptText="Ocorrências e Observações:">
+                           <styleClass>
+                              <String fx:value="bg-transparent" />
+                              <String fx:value="font-field" />
+                              <String fx:value="field-border" />
+                           </styleClass>
+                        </TextArea>
+                        <Label layoutX="488.0" layoutY="280.0" styleClass="font-field" text="Ocorrências e Observações:" />
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab text="Pesquisar Clientes">
+               <content>
+                  <AnchorPane prefHeight="200.0" prefWidth="200.0" />
+               </content>
+            </Tab>
+            <Tab text="Pesquisar Pedidos">
+               <content>
+                  <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                     <children>
+                        <DatePicker layoutX="62.0" layoutY="128.0" />
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+         </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>

@@ -1,98 +1,356 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
 <?import java.lang.String?>
 <?import java.net.URL?>
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="592.0" prefWidth="932.0" style="-fx-background-color: transparent;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="printshopmanager.TelaPrincipalController">
+<AnchorPane prefHeight="692.0" prefWidth="1202.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="printshopmanager.TelaPrincipalController">
+    <stylesheets>
+        <URL value="@style.css" />
+        <URL value="@telaprincipal.css" />
+    </stylesheets>
+    <styleClass>
+        <String fx:value="bg-transparent" />
+    </styleClass>
     <children>
-        <AnchorPane id="AnchorPane" prefHeight="590.0" prefWidth="930.0" style="-fx-background-color: #FFFFFF;" styleClass="mainFxmlClass" AnchorPane.leftAnchor="1.0" AnchorPane.topAnchor="1.0">
-            <stylesheets>
-                <URL value="@style.css" />
-                <URL value="@telaprincipal.css" />
-            </stylesheets>
+        <AnchorPane styleClass="mainFxmlClass" AnchorPane.leftAnchor="1.0" AnchorPane.topAnchor="1.0">
+        <styleClass>
+            <String fx:value="bg-white" />
+            <String fx:value="height-screen" />
+            <String fx:value="width-screen" />
+        </styleClass>
            <children>
-                <AnchorPane fx:id="main" prefHeight="590.0" prefWidth="930.0" />
-                <VBox fx:id="menu" prefHeight="590.0" prefWidth="260.0" styleClass="vBoxMenu" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+                <AnchorPane fx:id="main" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                    <styleClass>
+                        <String fx:value="bg-white" />
+                        <String fx:value="height-screen" />
+                        <String fx:value="width-screen" />
+                    </styleClass>
+                </AnchorPane>
+            <Pane prefHeight="50.0" prefWidth="200.0">
+               <styleClass>
+                  <String fx:value="width-screen" />
+                  <String fx:value="bg-darkblue" />
+               </styleClass>
+            </Pane>
+                <VBox fx:id="menu" prefHeight="590.0" prefWidth="260.0" styleClass="bg-darkblue" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
                     <children>
-                       <Button mnemonicParsing="false" onAction="#clickedOrcamento" prefHeight="83.0" prefWidth="260.0" text="Orçamento" textFill="WHITE">
-                          <font>
-                             <Font name="Century Gothic" size="18.0" />
-                          </font>
-                          <graphic>
-                             <FontAwesomeIcon fill="WHITE" iconName="FILE" translateX="-10.0" wrappingWidth="19.428571701049805" />
-                          </graphic>
-                          <styleClass>
-                             <String fx:value="btn-border-none" />
-                             <String fx:value="menu-button" />
-                          </styleClass>
-                          <VBox.margin>
-                             <Insets top="100.0" />
-                          </VBox.margin>
-                       </Button>
-                       <Button mnemonicParsing="false" onAction="#clickedFuncionarios" prefHeight="83.0" prefWidth="260.0" text="Funcionários" textFill="WHITE">
-                          <font>
-                             <Font name="Century Gothic" size="18.0" />
-                          </font>
-                          <graphic>
-                             <FontAwesomeIcon fill="WHITE" iconName="USER" translateX="-5.0" wrappingWidth="19.428571701049805" />
-                          </graphic>
-                          <styleClass>
-                             <String fx:value="btn-border-none" />
-                             <String fx:value="menu-button" />
-                          </styleClass>
-                       </Button>
-                       <Button mnemonicParsing="false" onAction="#clickedProdutos" prefHeight="83.0" prefWidth="260.0" text="Produtos" textFill="WHITE">
-                          <font>
-                             <Font name="Century Gothic" size="18.0" />
-                          </font>
-                          <graphic>
-                             <FontAwesomeIcon fill="WHITE" iconName="SHOPPING_CART" translateX="-20.0" wrappingWidth="19.428571701049805" />
-                          </graphic>
-                          <styleClass>
-                             <String fx:value="btn-border-none" />
-                             <String fx:value="menu-button" />
-                          </styleClass>
-                       </Button>
-                       <Button mnemonicParsing="false" onAction="#clickedFornecedores" prefHeight="83.0" prefWidth="260.0" text="Fornecedores" textFill="WHITE">
-                          <font>
-                             <Font name="Century Gothic" size="18.0" />
-                          </font>
-                          <graphic>
-                             <FontAwesomeIcon fill="WHITE" iconName="TRUCK" wrappingWidth="19.428571701049805" />
-                          </graphic>
-                          <styleClass>
-                             <String fx:value="btn-border-none" />
-                             <String fx:value="menu-button" />
-                          </styleClass>
-                       </Button>
-                       <Button mnemonicParsing="false" onAction="#clickedFerramentas" prefHeight="83.0" prefWidth="260.0" text="Ferramentas" textFill="WHITE">
-                          <font>
-                             <Font name="Century Gothic" size="18.0" />
-                          </font>
-                          <graphic>
-                             <FontAwesomeIcon fill="WHITE" iconName="TAGS" translateX="-5.0" wrappingWidth="19.428571701049805" />
-                          </graphic>
-                          <styleClass>
-                             <String fx:value="btn-border-none" />
-                             <String fx:value="menu-button" />
-                          </styleClass>
-                       </Button>
+                  <HBox alignment="BOTTOM_CENTER" prefHeight="80.0" prefWidth="200.0" styleClass="bg-darkblue">
+                     <children>
+                        <Label text="Print Shop" textFill="WHITE">
+                           <font>
+                              <Font name="Century Gothic" size="32.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets bottom="5.0" />
+                           </HBox.margin>
+                        </Label>
+                     </children>
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                  </HBox>
+                  <HBox prefHeight="100.0" prefWidth="200.0">
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                     <children>
+                        <Label styleClass="menu-text" text="Empresa">
+                           <HBox.margin>
+                              <Insets left="5.0" />
+                           </HBox.margin>
+                        </Label>
+                     </children>
+                     <styleClass>
+                        <String fx:value="menu-item" />
+                        <String fx:value="menu-title" />
+                        <String fx:value="bg-grayblue" />
+                     </styleClass>
+                  </HBox>
+                  <HBox alignment="CENTER_LEFT" onMouseClicked="#clickedClientes" prefHeight="100.0" prefWidth="200.0">
+                     <styleClass>
+                        <String fx:value="menu-button" />
+                        <String fx:value="bg-transparent" />
+                        <String fx:value="menu-item" />
+                     </styleClass>
+                     <children>
+                        <ImageView fitHeight="35.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/iconCliente.png" />
+                           </image>
+                           <HBox.margin>
+                              <Insets left="20.0" />
+                           </HBox.margin>
+                        </ImageView>
+                        <Label styleClass="menu-text" text="Clientes">
+                           <HBox.margin>
+                              <Insets left="15.0" />
+                           </HBox.margin>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER_LEFT" onMouseClicked="#clickedFuncionarios" prefHeight="100.0" prefWidth="200.0">
+                     <styleClass>
+                        <String fx:value="menu-button" />
+                        <String fx:value="bg-transparent" />
+                        <String fx:value="menu-item" />
+                     </styleClass>
+                     <children>
+                        <ImageView fitHeight="35.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                           <HBox.margin>
+                              <Insets left="20.0" />
+                           </HBox.margin>
+                           <image>
+                              <Image url="@../images/iconFuncionario.png" />
+                           </image>
+                        </ImageView>
+                        <Label styleClass="menu-text" text="Funcionários">
+                           <HBox.margin>
+                              <Insets left="15.0" />
+                           </HBox.margin>
+                        </Label>
+                     </children>
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                  </HBox>
+                  <HBox alignment="CENTER_LEFT" onMouseClicked="#clickedFornecedores" prefHeight="100.0" prefWidth="200.0">
+                     <styleClass>
+                        <String fx:value="menu-button" />
+                        <String fx:value="bg-transparent" />
+                        <String fx:value="menu-item" />
+                     </styleClass>
+                     <children>
+                        <ImageView fitHeight="35.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/iconFornecedor.png" />
+                           </image>
+                           <HBox.margin>
+                              <Insets left="23.0" />
+                           </HBox.margin>
+                        </ImageView>
+                        <Label styleClass="menu-text" text="Fornecedores">
+                           <HBox.margin>
+                              <Insets left="15.0" />
+                           </HBox.margin>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER_LEFT" onMouseClicked="#clickedProdutos" prefHeight="100.0" prefWidth="200.0">
+                     <styleClass>
+                        <String fx:value="menu-button" />
+                        <String fx:value="bg-transparent" />
+                        <String fx:value="menu-item" />
+                     </styleClass>
+                     <children>
+                        <ImageView fitHeight="35.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/iconProduto.png" />
+                           </image>
+                           <HBox.margin>
+                              <Insets left="23.0" />
+                           </HBox.margin>
+                        </ImageView>
+                        <Label styleClass="menu-text" text="Produtos">
+                           <HBox.margin>
+                              <Insets left="15.0" />
+                           </HBox.margin>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <Label styleClass="menu-text" text="Trabalhos">
+                           <HBox.margin>
+                              <Insets left="5.0" />
+                           </HBox.margin>
+                        </Label>
+                     </children>
+                     <styleClass>
+                        <String fx:value="menu-item" />
+                        <String fx:value="menu-title" />
+                        <String fx:value="bg-grayblue" />
+                     </styleClass>
+                  </HBox>
+                  <HBox alignment="CENTER_LEFT" onMouseClicked="#clickedOrcamento" prefHeight="100.0" prefWidth="200.0">
+                     <styleClass>
+                        <String fx:value="menu-button" />
+                        <String fx:value="bg-transparent" />
+                        <String fx:value="menu-item" />
+                     </styleClass>
+                     <children>
+                        <ImageView fitHeight="35.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/iconOrcamento.png" />
+                           </image>
+                           <HBox.margin>
+                              <Insets left="20.0" />
+                           </HBox.margin>
+                        </ImageView>
+                        <Label styleClass="menu-text" text="Orçamento">
+                           <HBox.margin>
+                              <Insets left="15.0" />
+                           </HBox.margin>
+                        </Label>
+                     </children>
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                  </HBox>
+                  <HBox alignment="CENTER_LEFT" onMouseClicked="#clickedRelatorios" prefHeight="100.0" prefWidth="200.0">
+                     <styleClass>
+                        <String fx:value="menu-button" />
+                        <String fx:value="bg-transparent" />
+                        <String fx:value="menu-item" />
+                     </styleClass>
+                     <children>
+                        <ImageView fitHeight="35.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/iconEstoque.png" />
+                           </image>
+                           <HBox.margin>
+                              <Insets left="20.0" />
+                           </HBox.margin>
+                        </ImageView>
+                        <Label styleClass="menu-text" text="Estoque">
+                           <HBox.margin>
+                              <Insets left="15.0" />
+                           </HBox.margin>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <Label styleClass="menu-text" text="Utilidades">
+                           <HBox.margin>
+                              <Insets left="5.0" />
+                           </HBox.margin>
+                        </Label>
+                     </children>
+                     <styleClass>
+                        <String fx:value="menu-item" />
+                        <String fx:value="menu-title" />
+                        <String fx:value="bg-grayblue" />
+                     </styleClass>
+                  </HBox>
+                  <HBox alignment="CENTER_LEFT" onMouseClicked="#clickedSobre" prefHeight="100.0" prefWidth="200.0">
+                     <styleClass>
+                        <String fx:value="menu-button" />
+                        <String fx:value="bg-transparent" />
+                        <String fx:value="menu-item" />
+                     </styleClass>
+                     <children>
+                        <ImageView fitHeight="35.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/iconSobre.png" />
+                           </image>
+                           <HBox.margin>
+                              <Insets left="20.0" />
+                           </HBox.margin>
+                        </ImageView>
+                        <Label styleClass="menu-text" text="Sobre">
+                           <HBox.margin>
+                              <Insets left="15.0" />
+                           </HBox.margin>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER_LEFT" onMouseClicked="#clickedBackup" prefHeight="100.0" prefWidth="200.0">
+                     <styleClass>
+                        <String fx:value="menu-button" />
+                        <String fx:value="bg-transparent" />
+                        <String fx:value="menu-item" />
+                     </styleClass>
+                     <children>
+                        <ImageView fitHeight="35.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/iconBackup.png" />
+                           </image>
+                           <HBox.margin>
+                              <Insets left="20.0" />
+                           </HBox.margin>
+                        </ImageView>
+                        <Label styleClass="menu-text" text="Backup">
+                           <HBox.margin>
+                              <Insets left="15.0" />
+                           </HBox.margin>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER_LEFT" onMouseClicked="#clickedFerramentas" prefHeight="100.0" prefWidth="200.0">
+                     <styleClass>
+                        <String fx:value="menu-button" />
+                        <String fx:value="bg-transparent" />
+                        <String fx:value="menu-item" />
+                     </styleClass>
+                     <children>
+                        <ImageView fitHeight="35.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/iconFerramentas.png" />
+                           </image>
+                           <HBox.margin>
+                              <Insets left="20.0" />
+                           </HBox.margin>
+                        </ImageView>
+                        <Label styleClass="menu-text" text="Ferramentas">
+                           <HBox.margin>
+                              <Insets left="15.0" />
+                           </HBox.margin>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <Label styleClass="menu-text" text="Outros">
+                           <HBox.margin>
+                              <Insets left="5.0" />
+                           </HBox.margin>
+                        </Label>
+                     </children>
+                     <styleClass>
+                        <String fx:value="menu-item" />
+                        <String fx:value="menu-title" />
+                        <String fx:value="bg-grayblue" />
+                     </styleClass>
+                  </HBox>
+                  <HBox alignment="CENTER_LEFT" onMouseClicked="#clickedSobre" prefHeight="100.0" prefWidth="200.0">
+                     <styleClass>
+                        <String fx:value="menu-button" />
+                        <String fx:value="bg-transparent" />
+                        <String fx:value="menu-item" />
+                     </styleClass>
+                     <children>
+                        <ImageView fitHeight="35.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/iconSair.png" />
+                           </image>
+                           <HBox.margin>
+                              <Insets left="20.0" />
+                           </HBox.margin>
+                        </ImageView>
+                        <Label styleClass="menu-text" text="Sair">
+                           <HBox.margin>
+                              <Insets left="15.0" />
+                           </HBox.margin>
+                        </Label>
+                     </children>
+                  </HBox>
                     </children>
                     <effect>
                        <DropShadow />
                     </effect>
                 </VBox>
-                <Button fx:id="btnHamburger" mnemonicParsing="false" onAction="#clickedHamburger" prefHeight="35.0" prefWidth="60.0" styleClass="btn-border-none" AnchorPane.leftAnchor="50.0" AnchorPane.topAnchor="40.0">
+                <Button fx:id="btnHamburger" mnemonicParsing="false" onAction="#clickedHamburger" prefHeight="35.0" prefWidth="60.0" styleClass="btn-border-none" AnchorPane.topAnchor="5.0">
                     <graphic>
                         <Pane prefHeight="26.0" prefWidth="50.0">
                         <children>
@@ -106,15 +364,15 @@
                     </Pane>
                  </graphic>
               </Button>
-              <HBox fx:id="titleBar" layoutX="844.0" prefHeight="61.0" prefWidth="86.0">
-                 <children>
-                    <fx:include source="TitleBar.fxml" />
-                 </children>
-              </HBox>
            </children>
          <effect>
             <DropShadow />
          </effect>
         </AnchorPane>
+        <HBox fx:id="titleBar" prefHeight="35.0" prefWidth="86.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+           <children>
+              <fx:include source="TitleBar.fxml" />
+           </children>
+        </HBox>
     </children>
 </AnchorPane>
