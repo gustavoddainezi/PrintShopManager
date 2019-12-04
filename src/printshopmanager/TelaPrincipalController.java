@@ -1,4 +1,3 @@
-
 package printshopmanager;
 
 import java.io.IOException;
@@ -19,14 +18,14 @@ import javafx.scene.Node;
 import javafx.scene.control.Label;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.VBox;
+import javafx.stage.Stage;
 import javafx.util.Duration;
 
-
 public class TelaPrincipalController implements Initializable {
-    
+
     @FXML
     private AnchorPane main;
-    
+
     @FXML
     private Label firstPiece;
 
@@ -35,20 +34,25 @@ public class TelaPrincipalController implements Initializable {
 
     @FXML
     private Label thirdPiece;
-    
+
     @FXML
     private VBox menu;
-    
+
     @FXML
     void clickedBackup(Event event) {
         /*loadScreen("TelaBackup");*/
     }
-    
+
     @FXML
     void clickedClientes(Event event) {
         loadScreen("TelaClientes");
     }
-    
+
+    @FXML
+    void clickedEstoque(Event event) {
+        loadScreen("TelaEstoque");
+    }
+
     @FXML
     void clickedFerramentas(Event event) {
         loadScreen("TelaFerramentas");
@@ -73,17 +77,34 @@ public class TelaPrincipalController implements Initializable {
     void clickedProdutos(Event event) {
         loadScreen("TelaProdutos");
     }
-    
+
     @FXML
     void clickedRelatorios(Event event) {
         /*loadScreen("TelaRelatorios");*/
     }
-    
+
+    @FXML
+    void clickedSair(Event event) {
+        PrintAlert alerta = new PrintAlert();
+        if (alerta.alertConfirm("Deseja realmente fazer Logoff?")) {
+            try {
+                PrintShopManager login = new PrintShopManager();
+                Node node = (Node) event.getSource();
+                Stage stage = (Stage) node.getScene().getWindow();
+                stage.close();
+                login.setLoader("TelaLogin.fxml");
+                login.start(new Stage());
+            } catch (Exception e) {
+                System.err.println(" " + e.getStackTrace());
+            }
+        }
+    }
+
     @FXML
     void clickedSobre(Event event) {
         /*loadScreen("TelaSobre");*/
     }
-    
+
     @FXML
     void clickedHamburger(ActionEvent event) {
         Duration duracao = new Duration(300);
@@ -96,7 +117,7 @@ public class TelaPrincipalController implements Initializable {
         int yt = -15;
         int fValue = 1;
         int tValue = 0;
-        if(this.isMenu){
+        if (this.isMenu) {
             xMenu = -270;
             xMain = 0;
             ang *= -1;
@@ -119,39 +140,38 @@ public class TelaPrincipalController implements Initializable {
     }
     private boolean isMenu = false;
 
-    
-    private void loadScreen(String nameScreen){
-        try{
-            AnchorPane pane = FXMLLoader.load(getClass().getResource(nameScreen+".fxml"));
+    private void loadScreen(String nameScreen) {
+        try {
+            AnchorPane pane = FXMLLoader.load(getClass().getResource(nameScreen + ".fxml"));
             main.getChildren().setAll(pane);
         } catch (IOException ex) {
             Logger.getLogger(TelaPrincipalController.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
-    
-    private RotateTransition rotateHamburger(Duration duracao, int grau, Node node){
+
+    private RotateTransition rotateHamburger(Duration duracao, int grau, Node node) {
         RotateTransition rotateTransition = new RotateTransition(duracao, node);
-	rotateTransition.setByAngle(grau);
+        rotateTransition.setByAngle(grau);
         return rotateTransition;
     }
-    
-    private TranslateTransition translateTransition(Duration duracao, Node node, int toX, int toY){
+
+    private TranslateTransition translateTransition(Duration duracao, Node node, int toX, int toY) {
         TranslateTransition translateTransition = new TranslateTransition(duracao, node);
-	translateTransition.setToX(toX);
+        translateTransition.setToX(toX);
         translateTransition.setToY(toY);
         return translateTransition;
     }
-    
-    private FadeTransition fadeTransition(Duration duracao, Node node, int fValue, int tValue){
+
+    private FadeTransition fadeTransition(Duration duracao, Node node, int fValue, int tValue) {
         FadeTransition fadeTransition = new FadeTransition(duracao, node);
         fadeTransition.setFromValue(fValue);
         fadeTransition.setToValue(tValue);
         return fadeTransition;
     }
-    
-    private void transition(Transition t){
+
+    private void transition(Transition t) {
         t.setAutoReverse(true);
-	t.setCycleCount(1);
+        t.setCycleCount(1);
         t.play();
     }
 
@@ -159,6 +179,6 @@ public class TelaPrincipalController implements Initializable {
     public void initialize(URL url, ResourceBundle rb) {
         this.menu.setTranslateX(-270);
         this.loadScreen("TelaOrcamentos");
-    }    
-    
+    }
+
 }

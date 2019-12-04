@@ -1,0 +1,14 @@
+.textField {
+    -fx-background-color: transparent;
+    -fx-text-fill: white;
+    -fx-prompt-text-fill: white;
+    -fx-cursor: text;
+}
+
+#btnLogin{
+    -fx-cursor: hand;
+}
+
+FontAwesomeIcon {
+    -fx-cursor: hand;
+}

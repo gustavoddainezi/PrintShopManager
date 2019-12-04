@@ -10,6 +10,7 @@ import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
 
 public class TitleBarController implements Initializable {
+
     @Override
     public void initialize(URL url, ResourceBundle rb) {
 
@@ -23,9 +24,12 @@ public class TitleBarController implements Initializable {
 
     @FXML
     void close(MouseEvent event) {
-        Node node = (Node) event.getSource();
-        Stage stage = (Stage) node.getScene().getWindow();
-        stage.close();
+        PrintAlert alerta = new PrintAlert();
+        if (alerta.alertConfirm("Deseja realmente encerrar o software?")) {
+            Node node = (Node) event.getSource();
+            Stage stage = (Stage) node.getScene().getWindow();
+            stage.close();
+        }
     }
 
     @FXML

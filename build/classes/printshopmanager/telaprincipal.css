@@ -1,0 +1,37 @@
+.mainFxmlClass {
+
+}
+
+.hamburger-piece{
+    -fx-border-width: 6px 0px 0px 0px;
+    -fx-border-color: #ffffff;/*#6e7e8a;/*#88a2e8*/
+}
+
+.hamburger{
+    -fx-cursor: hand;
+}
+
+.menu-button{
+    -fx-pref-height: 40px;
+}
+
+.menu-button:hover{
+    -fx-background-color: #4286f4;/*#39daf7*/
+    -fx-cursor: hand;
+}
+
+.menu-item{
+    -fx-text-fill: #ffffff;
+    -fx-text-alignment: center;
+    -fx-pref-width: 260px;
+}
+
+.menu-text{
+    -fx-text-fill: #ffffff;
+    -fx-font-family: "Century Gothic";
+    -fx-font-size: 18px;
+}
+
+.menu-title{
+    -fx-pref-height: 20px;
+}

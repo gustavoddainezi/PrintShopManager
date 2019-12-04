@@ -1,16 +1,20 @@
 package printshopmanager;
 
-import database.ManipularBancoDados;
-import static java.lang.String.valueOf;
+import database.Admin;
+import database.ClientesDAO;
+import database.FornecedoresDAO;
+import database.FuncionariosDAO;
+import database.ProdutosFornecidosDAO;
+import database.TelefonesClientesDAO;
+import database.TelefonesFornecedoresDAO;
+import database.TelefonesFuncionariosDAO;
+import database.UsuariosDAO;
 import java.net.URL;
-import java.sql.ResultSet;
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.Node;
-import javafx.scene.control.Alert;
-import javafx.scene.control.Alert.AlertType;
 import javafx.scene.control.Button;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
@@ -19,9 +23,10 @@ import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
 public class TelaLoginController implements Initializable {
+
     @FXML
     private Button btnLogin;
-    
+
     @FXML
     private TextField txtUser;
 
@@ -35,18 +40,25 @@ public class TelaLoginController implements Initializable {
     private Text hypForgetP;
 
     // Instância da classe de alerta de mensagens ao usuário
-    Alert alerta = new Alert(AlertType.ERROR);
+    PrintAlert alerta = new PrintAlert();
     // Váriável que recebe o código de recuperação
     private static String cod;
-    // Instância do Banco de Dados
-    private ManipularBancoDados mbd;
+    // Instância da classe UsuariosDAO
+    private UsuariosDAO user;
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // Continuação da instância ao inicializar aplicação
-        this.mbd = ManipularBancoDados.getInstancia();
-        // Chama o método e insere os dados na tabela usuários
-        this.inserirDadosTabela();
+        Admin a = new Admin();
+        this.user = new UsuariosDAO();
+        ClientesDAO c = new ClientesDAO();
+        TelefonesClientesDAO tc = new TelefonesClientesDAO();
+        FuncionariosDAO func = new FuncionariosDAO();
+        TelefonesFuncionariosDAO tfunc = new TelefonesFuncionariosDAO();
+        FornecedoresDAO fornec = new FornecedoresDAO();
+        TelefonesFornecedoresDAO tfornec = new TelefonesFornecedoresDAO();
+        ProdutosFornecidosDAO pf = new ProdutosFornecidosDAO();
+        
     }
 
     // Evento de botão login
@@ -55,59 +67,21 @@ public class TelaLoginController implements Initializable {
         // Tratamento de erro
         try {
             // Recebe os valores e os atribui nas variáveis
-            String login = valueOf(this.txtUser.getText());
-            String senha = valueOf(this.txtPass.getText());
-
-            // Variável de consulta e pesquisa
-            String q = "SELECT * FROM USUARIOS";
-            ResultSet rs = this.mbd.execConsulta(q);
-
-            // Enquanto houver valor no ResultSet o loop continua
-            while (rs.next()) {
-                String logins = rs.getString("login");
-                String senhas = valueOf(rs.getString("senha"));
-
-                // Verifica as credênciais com o Banco de Dados
-                if ((senhas.equals(senha) || senha.equals(this.cod)) && logins.equals(login)) {
-                    PrintShopManager menu = new PrintShopManager();
-                    Node node = (Node) event.getSource();
-                    Stage stage = (Stage) node.getScene().getWindow();
-                    stage.close();
-                    menu.setLoader("TelaPrincipal.fxml");
-                    menu.start(new Stage());
-                    break;
-                } 
-                else {
-                    alerta.setTitle("Mensagem de erro");
-                    alerta.setHeaderText("Encontramos um problema!");
-                    alerta.setContentText("O login ou senha estão incorretos!");
-                    alerta.showAndWait();
-                    break;
-                }
+            String login = this.txtUser.getText();
+            String senha = this.txtPass.getText();
+            // Verifica as credênciais com o Banco de Dados
+            if (this.user.login(login, senha)) {
+                PrintShopManager menu = new PrintShopManager();
+                Node node = (Node) event.getSource();
+                Stage stage = (Stage) node.getScene().getWindow();
+                stage.close();
+                menu.setLoader("TelaPrincipal.fxml");
+                menu.start(new Stage());
+            } else {
+                alerta.alertError("Encontramos um problema!", "O login ou senha estão incorretos!");
             }
         } catch (Exception e) {
             System.err.println(" " + e.getStackTrace());
-        }
-    }
-
-    // Método insere os dados na tabela USUARIOS do Banco de Dados
-    private void inserirDadosTabela() {
-        // Credênciais do usuário
-        String log = "admin";
-        int sen = 1234;
-
-        // Código sql de inserção de dados
-        String sql = "INSERT INTO USUARIOS VALUES(DEFAULT, '" + log + "', " + sen + ")";
-
-        // Mostra no console a linha de comando preenchida
-        System.out.println(sql);
-
-        // Cadastra e verifica o usuário retornando mensagem de êxito ou erro
-        if (this.mbd.executarAcao(sql)) {
-            System.out.println("Usuário cadastrado com sucesso!");
-        } 
-        else {
-            System.out.println("Erro ao cadastrar usuário");
         }
     }
 }
