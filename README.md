@@ -8,7 +8,7 @@
 
 <p align="center">
  <a href="#-sobre-o-projeto">Sobre</a> •
- <a href="#-funcionalidades">Funcionalidades</a> •
+ <a href="#-funcionalidades-do-sistema">Funcionalidades</a> •
  <a href="#-layout">Layout</a> • 
  <a href="#-como-executar-o-projeto">Como executar</a> • 
  <a href="#-tecnologias">Tecnologias</a> • 
@@ -25,7 +25,7 @@
 
 ---
 
-## ⚙️ Funcionalidades
+## ⚙️ Funcionalidades do Sistema
 
 - [x] Cadastrar Funcionários
 - [x] Cadastrar Fornecedores
