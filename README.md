@@ -67,7 +67,7 @@ Antes de começar, você vai precisar ter instalado em sua máquina as seguintes
 
 # Abra a pasta do projeto com o Netbeans IDE
 
-# Compile e execute o software
+# Compile e execute o software.
 
 # A janela da aplicação será aberta.
 
