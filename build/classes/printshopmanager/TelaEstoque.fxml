@@ -6,6 +6,7 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.Tab?>
 <?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableView?>
 <?import javafx.scene.control.TextArea?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
@@ -108,7 +109,43 @@
             </Tab>
             <Tab text="Pesquisar Estoque">
                <content>
-                  <AnchorPane prefHeight="200.0" prefWidth="200.0" />
+                  <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                     <children>
+                        <TextField fx:id="txtNome1" layoutX="345.0" layoutY="35.0" prefHeight="29.0" prefWidth="383.0" promptText="Nome Completo" text="Nome do Item">
+                           <styleClass>
+                              <String fx:value="bg-transparent" />
+                              <String fx:value="field-border" />
+                              <String fx:value="font-field" />
+                           </styleClass>
+                        </TextField>
+                        <TextField fx:id="txtCPF1" layoutX="40.0" layoutY="35.0" prefHeight="29.0" prefWidth="263.0" promptText="CPF" text="Código do Item" AnchorPane.leftAnchor="40.0">
+                           <styleClass>
+                              <String fx:value="bg-transparent" />
+                              <String fx:value="field-border" />
+                              <String fx:value="font-field" />
+                           </styleClass>
+                        </TextField>
+                        <Button layoutX="759.0" layoutY="32.0" mnemonicParsing="false" onAction="#cadastrar" prefWidth="180.0" text="Pesquisar">
+                           <font>
+                              <Font name="System Bold" size="17.0" />
+                           </font>
+                           <styleClass>
+                              <String fx:value="btn" />
+                              <String fx:value="font-field" />
+                           </styleClass>
+                        </Button>
+                        <Button layoutX="974.0" layoutY="32.0" mnemonicParsing="false" onAction="#cadastrar" prefWidth="180.0" style="-fx-background-color: red;" text="Excluir">
+                           <font>
+                              <Font name="System Bold" size="17.0" />
+                           </font>
+                           <styleClass>
+                              <String fx:value="btn" />
+                              <String fx:value="font-field" />
+                           </styleClass>
+                        </Button>
+                        <TableView fx:id="tvProdutos" editable="true" layoutX="40.0" layoutY="103.0" prefHeight="454.0" prefWidth="1120.0" AnchorPane.leftAnchor="40.0" AnchorPane.rightAnchor="40.0" />
+                     </children>
+                  </AnchorPane>
                </content>
             </Tab>
          </tabs>

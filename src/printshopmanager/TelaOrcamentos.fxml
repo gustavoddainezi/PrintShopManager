@@ -9,6 +9,7 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.Tab?>
 <?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableView?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.control.TitledPane?>
 <?import javafx.scene.effect.DropShadow?>
@@ -16,7 +17,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="590.0" prefWidth="930.0" stylesheets="@style.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane prefHeight="590.0" prefWidth="930.0" stylesheets="@style.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="printshopmanager.TelaOrcamentosController">
     <children>
         <TabPane layoutX="-1.0" prefHeight="700.0" prefWidth="1200.0" styleClass="bg-white" tabClosingPolicy="UNAVAILABLE" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="50.0">
             <tabs>
@@ -57,7 +58,11 @@
                                 <Label layoutX="1009.0" layoutY="98.0" styleClass="font-field" text="Índice de Desperdicio: " />
                                 <TitledPane animated="false" layoutX="14.0" layoutY="126.0" prefHeight="271.0" prefWidth="603.0" text="Itens Adicionados">
                                     <content>
-                                        <AnchorPane prefHeight="219.0" prefWidth="601.0" styleClass="bg-white" />
+                                        <AnchorPane prefHeight="219.0" prefWidth="601.0" styleClass="bg-white">
+                                 <children>
+                                    <TableView fx:id="tvProdutos" editable="true" layoutX="90.0" layoutY="23.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="-10.0" AnchorPane.leftAnchor="-10.0" AnchorPane.rightAnchor="-10.0" AnchorPane.topAnchor="-10.0">
+                                    </TableView>
+                                 </children></AnchorPane>
                                     </content>
                                 </TitledPane>
                                 <TitledPane animated="false" layoutX="623.0" layoutY="174.0" prefHeight="124.0" prefWidth="186.0" text="Adicionais">
@@ -204,7 +209,10 @@
                                 </Button>
                                 <TitledPane animated="false" layoutX="14.0" layoutY="402.0" prefHeight="174.0" prefWidth="604.0" text="Tintas">
                                     <content>
-                                        <AnchorPane prefHeight="147.0" prefWidth="526.0" styleClass="bg-white" />
+                                        <AnchorPane prefHeight="147.0" prefWidth="526.0" styleClass="bg-white">
+                                 <!--<children>
+                                    <TableView fx:id="tvCor" layoutX="364.0" layoutY="39.0" prefHeight="110.0" prefWidth="184.0" AnchorPane.bottomAnchor="-10.0" AnchorPane.leftAnchor="-10.0" AnchorPane.rightAnchor="-10.0" AnchorPane.topAnchor="-10.0" />
+                                 </children>--></AnchorPane>
                                     </content>
                                 </TitledPane>
                                 <TitledPane animated="false" layoutX="8.0" layoutY="3.0" prefHeight="85.0" prefWidth="1200.0" text="Cabeçalho" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">

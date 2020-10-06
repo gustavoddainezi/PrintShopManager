@@ -7,6 +7,7 @@
 <?import javafx.scene.control.ListView?>
 <?import javafx.scene.control.Tab?>
 <?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableView?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
@@ -92,13 +93,6 @@
                               <String fx:value="hand" />
                            </styleClass>
                         </ComboBox>
-                        <TextField fx:id="txtCPF" layoutX="479.0" layoutY="195.0" prefHeight="29.0" prefWidth="263.0" promptText="CPF">
-                           <styleClass>
-                              <String fx:value="bg-transparent" />
-                              <String fx:value="field-border" />
-                              <String fx:value="font-field" />
-                           </styleClass>
-                        </TextField>
                         <TextField fx:id="txtEmail" layoutX="40.0" layoutY="195.0" prefHeight="29.0" prefWidth="383.0" promptText="Email">
                            <styleClass>
                               <String fx:value="bg-transparent" />
@@ -106,7 +100,7 @@
                               <String fx:value="font-field" />
                            </styleClass>
                         </TextField>
-                        <TextField fx:id="txtCNPJ" layoutX="791.0" layoutY="195.0" prefHeight="29.0" prefWidth="261.0" promptText="CNPJ">
+                        <TextField fx:id="txtCNPJ" layoutX="794.0" layoutY="33.0" prefHeight="29.0" prefWidth="261.0" promptText="CNPJ">
                            <styleClass>
                               <String fx:value="bg-transparent" />
                               <String fx:value="field-border" />
@@ -139,14 +133,6 @@
                               <String fx:value="font-field" />
                            </styleClass>
                         </TextField>
-                        <ComboBox fx:id="cboTipo" layoutX="791.0" layoutY="33.0" onAction="#selectedTipo" prefHeight="29.0" prefWidth="263.0" promptText="Tipo de Pessoa">
-                           <styleClass>
-                              <String fx:value="bg-transparent" />
-                              <String fx:value="field-border" />
-                              <String fx:value="font-field" />
-                              <String fx:value="hand" />
-                           </styleClass>
-                        </ComboBox>
                         <TextField fx:id="txtProdutosFornecidos" layoutX="533.0" layoutY="260.0" prefHeight="29.0" prefWidth="258.0" promptText="Produtos Fornecidos">
                            <styleClass>
                               <String fx:value="bg-transparent" />
@@ -174,7 +160,43 @@
             </Tab>
             <Tab text="Pesquisar Fornecedores">
                <content>
-                  <AnchorPane prefHeight="200.0" prefWidth="200.0" />
+                  <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                     <children>
+                        <TextField fx:id="txtNome1" layoutX="345.0" layoutY="35.0" prefHeight="29.0" prefWidth="383.0" promptText="Nome Completo" text="Nome Fantasia">
+                           <styleClass>
+                              <String fx:value="bg-transparent" />
+                              <String fx:value="field-border" />
+                              <String fx:value="font-field" />
+                           </styleClass>
+                        </TextField>
+                        <TextField fx:id="txtCPF1" layoutX="40.0" layoutY="35.0" prefHeight="29.0" prefWidth="263.0" promptText="CPF" text="Código Fornecedor" AnchorPane.leftAnchor="40.0">
+                           <styleClass>
+                              <String fx:value="bg-transparent" />
+                              <String fx:value="field-border" />
+                              <String fx:value="font-field" />
+                           </styleClass>
+                        </TextField>
+                        <Button layoutX="759.0" layoutY="32.0" mnemonicParsing="false" onAction="#cadastrar" prefWidth="180.0" text="Pesquisar">
+                           <font>
+                              <Font name="System Bold" size="17.0" />
+                           </font>
+                           <styleClass>
+                              <String fx:value="btn" />
+                              <String fx:value="font-field" />
+                           </styleClass>
+                        </Button>
+                        <Button layoutX="974.0" layoutY="32.0" mnemonicParsing="false" onAction="#cadastrar" prefWidth="180.0" style="-fx-background-color: red;" text="Excluir">
+                           <font>
+                              <Font name="System Bold" size="17.0" />
+                           </font>
+                           <styleClass>
+                              <String fx:value="btn" />
+                              <String fx:value="font-field" />
+                           </styleClass>
+                        </Button>
+                        <TableView fx:id="tvProdutos" editable="true" layoutX="40.0" layoutY="103.0" prefHeight="454.0" prefWidth="1120.0" AnchorPane.leftAnchor="40.0" AnchorPane.rightAnchor="40.0" />
+                     </children>
+                  </AnchorPane>
                </content>
             </Tab>
          </tabs>

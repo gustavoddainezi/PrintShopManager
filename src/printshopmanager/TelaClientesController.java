@@ -4,6 +4,9 @@ import database.ClientesDAO;
 import database.TelefonesClientesDAO;
 import java.net.URL;
 import java.util.ResourceBundle;
+import javafx.beans.property.SimpleDoubleProperty;
+import javafx.beans.property.SimpleIntegerProperty;
+import javafx.beans.property.SimpleStringProperty;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -12,9 +15,14 @@ import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.ListView;
+import javafx.scene.control.TableColumn;
+import javafx.scene.control.TableView;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
+import model.Cliente;
+import model.Cor;
+import model.Produto;
 
 public class TelaClientesController implements Initializable {
 
@@ -147,9 +155,65 @@ public class TelaClientesController implements Initializable {
             }
         }
     }
+    
+    @FXML
+    private TableView<Cliente> tvProdutos;
+    
+    public void initTabelaProdutos(){
+        TableColumn<Cliente, Integer> colCod = new TableColumn("Código Cliente");
+        colCod.setCellValueFactory(data -> new SimpleIntegerProperty(data.getValue().getCod()).asObject());
+        
+        TableColumn<Cliente, String> colNome = new TableColumn("Nome");
+        colNome.setCellValueFactory(data -> new SimpleStringProperty(data.getValue().getNome()));
+        
+        TableColumn<Cliente, String> colTipo = new TableColumn("Tipo de Cliente");
+        colTipo.setCellValueFactory(data -> new SimpleStringProperty(data.getValue().getTipoCliente()));
+        
+        TableColumn<Cliente, String> colCpf = new TableColumn("CPF / CNPJ");
+        colCpf.setCellValueFactory(data -> new SimpleStringProperty(data.getValue().getCpf()));
+        
+        TableColumn<Cliente, String> colFan = new TableColumn("Nome Fantasia");
+        colFan.setCellValueFactory(data -> new SimpleStringProperty(data.getValue().getNomeFantasia()));
+        
+        TableColumn<Cliente, String> colEnd = new TableColumn("Endereço");
+        colEnd.setCellValueFactory(data -> new SimpleStringProperty(data.getValue().getEndereco()));
+        
+        TableColumn<Cliente, String> colBairro = new TableColumn("Bairro");
+        colBairro.setCellValueFactory(data -> new SimpleStringProperty(data.getValue().getBairro()));
+        
+        TableColumn<Cliente, String> colCep = new TableColumn("CEP");
+        colCep.setCellValueFactory(data -> new SimpleStringProperty(data.getValue().getCep()));
+        
+        TableColumn<Cliente, String> colCidade = new TableColumn("Cidade");
+        colCidade.setCellValueFactory(data -> new SimpleStringProperty(data.getValue().getCidade()));
+     
+        TableColumn<Cliente, String> colUF = new TableColumn("UF");
+        colUF.setCellValueFactory(data -> new SimpleStringProperty(data.getValue().getUf()));
+     
+        TableColumn<Cliente, String> colComplemento = new TableColumn("Complemento");
+        colComplemento.setCellValueFactory(data -> new SimpleStringProperty(data.getValue().getComplemento()));
+     
+        
+        this.tvProdutos.getColumns().addAll(colCod, colNome, colTipo, colCpf, colFan, colCep, colEnd, colBairro, colCidade, colUF, colComplemento);
+        Cliente c = new Cliente();
+        c.setCod(1);
+        c.setNome("Ana Caroline Freitas");
+        c.setTipoCliente("Fisíco");
+        c.setCpf("569.145.654-45");
+        c.setEndereco("R. Washington Luís, 17");
+        c.setNomeFantasia("");
+        c.setBairro("Vila Santa Lusia");
+        c.setCep("08596-166");
+        c.setCidade("Ferraz de Vasconcelos");
+        c.setUf("SP");
+        c.setComplemento("2° Andar");
+        this.tvProdutos.getItems().add(c);
+
+    }
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
+        this.initTabelaProdutos();
         try {
             PrintComboBox cbo = new PrintComboBox();
             this.cboTipo.setItems(cbo.getPessoas());

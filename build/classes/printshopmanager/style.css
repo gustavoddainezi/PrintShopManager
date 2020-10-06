@@ -65,7 +65,7 @@ FontAwesomeIcon {
 
 .btn{
     -fx-text-fill: #ffffff;
-    -fx-background-color:  #00B2E6;
+    -fx-background-color:  #4286f4;/*#39daf7#00A2E8; /*#00B2E6*/;
     -fx-background-radius: 10px;
     -fx-cursor: hand;
     -fx-font-size: 18px;
@@ -122,7 +122,35 @@ FontAwesomeIcon {
 
 .tab-pane > .tab-header-area > .tab-header-background {
     -fx-background-color: #002A47;
-    fx-cursor: hand;
+    -fx-cursor: hand;
+}
+
+.table-cell {
+    -fx-alignment: CENTER;
+    -fx-border-width: 0 0 0 0;
+}
+
+.table-view .column-header{
+    -fx-size: 4em;
+}
+
+.table-view .column-header,
+.tree-table-view .column-header,
+.table-view .filler,
+.tree-table-view .filler,
+.table-view > .column-header-background > .show-hide-columns-button,
+.tree-table-view > .column-header-background > .show-hide-columns-button,
+.table-view:constrained-resize .filler,
+.tree-table-view:constrained-resize .filler {
+    -fx-background-color: #ffffff;
+    -fx-border-width: 0px .1px .1px 0px;
+    -fx-border-color: #515151;
+    -fx-font-size: 1em;
+    -fx-font-weight:  normal;
+}
+
+.table-row-cell {
+    -fx-cell-size: 50px;
 }
 
 .vbox-container{
